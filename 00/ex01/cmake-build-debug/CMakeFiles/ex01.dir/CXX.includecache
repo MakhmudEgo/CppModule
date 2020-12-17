@@ -6,17 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/Users/mizola/cpp_module/ex01/Contacts.hpp
+/Users/mizola/CppModule/00/ex01/Contacts.hpp
 iostream
 -
 
-/Users/mizola/cpp_module/ex01/PhoneBook.hpp
+/Users/mizola/CppModule/00/ex01/PhoneBook.hpp
 iostream
 -
 Contacts.hpp
-/Users/mizola/cpp_module/ex01/Contacts.hpp
+/Users/mizola/CppModule/00/ex01/Contacts.hpp
 
-/Users/mizola/cpp_module/ex01/main.cpp
+/Users/mizola/CppModule/00/ex01/main.cpp
 PhoneBook.hpp
-/Users/mizola/cpp_module/ex01/PhoneBook.hpp
+/Users/mizola/CppModule/00/ex01/PhoneBook.hpp
+iomanip
+-
 

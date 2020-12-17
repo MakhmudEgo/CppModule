@@ -20,8 +20,8 @@ private:
 	std::string _UnderwearColor;
 	std::string _DarkestSecret;
 public:
-	void		setContact(const std::string& s, const int& i);
-	void		getContact(const int& i) const;
+	void		setContact(const std::string *arrData);
+	void		getContact(const size_t& index) const;
 };
 
 

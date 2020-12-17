@@ -63,10 +63,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mizola/cpp_module/ex01
+CMAKE_SOURCE_DIR = /Users/mizola/CppModule/00/ex01
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mizola/cpp_module/ex01/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/mizola/CppModule/00/ex01/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ex01.dir/depend.make
@@ -79,42 +79,42 @@ include CMakeFiles/ex01.dir/flags.make
 
 CMakeFiles/ex01.dir/main.cpp.o: CMakeFiles/ex01.dir/flags.make
 CMakeFiles/ex01.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mizola/cpp_module/ex01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ex01.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex01.dir/main.cpp.o -c /Users/mizola/cpp_module/ex01/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mizola/CppModule/00/ex01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ex01.dir/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex01.dir/main.cpp.o -c /Users/mizola/CppModule/00/ex01/main.cpp
 
 CMakeFiles/ex01.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex01.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mizola/cpp_module/ex01/main.cpp > CMakeFiles/ex01.dir/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mizola/CppModule/00/ex01/main.cpp > CMakeFiles/ex01.dir/main.cpp.i
 
 CMakeFiles/ex01.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex01.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mizola/cpp_module/ex01/main.cpp -o CMakeFiles/ex01.dir/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mizola/CppModule/00/ex01/main.cpp -o CMakeFiles/ex01.dir/main.cpp.s
 
 CMakeFiles/ex01.dir/PhoneBook.cpp.o: CMakeFiles/ex01.dir/flags.make
 CMakeFiles/ex01.dir/PhoneBook.cpp.o: ../PhoneBook.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mizola/cpp_module/ex01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ex01.dir/PhoneBook.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex01.dir/PhoneBook.cpp.o -c /Users/mizola/cpp_module/ex01/PhoneBook.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mizola/CppModule/00/ex01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ex01.dir/PhoneBook.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex01.dir/PhoneBook.cpp.o -c /Users/mizola/CppModule/00/ex01/PhoneBook.cpp
 
 CMakeFiles/ex01.dir/PhoneBook.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex01.dir/PhoneBook.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mizola/cpp_module/ex01/PhoneBook.cpp > CMakeFiles/ex01.dir/PhoneBook.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mizola/CppModule/00/ex01/PhoneBook.cpp > CMakeFiles/ex01.dir/PhoneBook.cpp.i
 
 CMakeFiles/ex01.dir/PhoneBook.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex01.dir/PhoneBook.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mizola/cpp_module/ex01/PhoneBook.cpp -o CMakeFiles/ex01.dir/PhoneBook.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mizola/CppModule/00/ex01/PhoneBook.cpp -o CMakeFiles/ex01.dir/PhoneBook.cpp.s
 
 CMakeFiles/ex01.dir/Contacts.cpp.o: CMakeFiles/ex01.dir/flags.make
 CMakeFiles/ex01.dir/Contacts.cpp.o: ../Contacts.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mizola/cpp_module/ex01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ex01.dir/Contacts.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex01.dir/Contacts.cpp.o -c /Users/mizola/cpp_module/ex01/Contacts.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mizola/CppModule/00/ex01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ex01.dir/Contacts.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex01.dir/Contacts.cpp.o -c /Users/mizola/CppModule/00/ex01/Contacts.cpp
 
 CMakeFiles/ex01.dir/Contacts.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex01.dir/Contacts.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mizola/cpp_module/ex01/Contacts.cpp > CMakeFiles/ex01.dir/Contacts.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mizola/CppModule/00/ex01/Contacts.cpp > CMakeFiles/ex01.dir/Contacts.cpp.i
 
 CMakeFiles/ex01.dir/Contacts.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex01.dir/Contacts.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mizola/cpp_module/ex01/Contacts.cpp -o CMakeFiles/ex01.dir/Contacts.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mizola/CppModule/00/ex01/Contacts.cpp -o CMakeFiles/ex01.dir/Contacts.cpp.s
 
 # Object files for target ex01
 ex01_OBJECTS = \
@@ -130,7 +130,7 @@ ex01: CMakeFiles/ex01.dir/PhoneBook.cpp.o
 ex01: CMakeFiles/ex01.dir/Contacts.cpp.o
 ex01: CMakeFiles/ex01.dir/build.make
 ex01: CMakeFiles/ex01.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/mizola/cpp_module/ex01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ex01"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/mizola/CppModule/00/ex01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ex01"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ex01.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -143,6 +143,6 @@ CMakeFiles/ex01.dir/clean:
 .PHONY : CMakeFiles/ex01.dir/clean
 
 CMakeFiles/ex01.dir/depend:
-	cd /Users/mizola/cpp_module/ex01/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/mizola/cpp_module/ex01 /Users/mizola/cpp_module/ex01 /Users/mizola/cpp_module/ex01/cmake-build-debug /Users/mizola/cpp_module/ex01/cmake-build-debug /Users/mizola/cpp_module/ex01/cmake-build-debug/CMakeFiles/ex01.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/mizola/CppModule/00/ex01/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/mizola/CppModule/00/ex01 /Users/mizola/CppModule/00/ex01 /Users/mizola/CppModule/00/ex01/cmake-build-debug /Users/mizola/CppModule/00/ex01/cmake-build-debug /Users/mizola/CppModule/00/ex01/cmake-build-debug/CMakeFiles/ex01.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ex01.dir/depend
 

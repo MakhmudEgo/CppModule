@@ -10,14 +10,16 @@
 
 class PhoneBook {
 private:
-	Contacts	_ContactList[8];
-	std::string s[11]; // = new std::string[8];
-	static size_t		_AmountContacts;
+	Contacts		_ContactList[8];
+	std::string		s[11]; // = new std::string[11];
+	static size_t	_AmountContacts;
 public:
 	PhoneBook();
-	static	void	incAmountContacts(void);
+	static void	incAmountContacts();
+	static size_t & getAmountContacts();
+	void		addContactInPhoneBook();
 	void		setContact(const std::string&, const int& index);
-	void		getContact(const int& i);
+	void		getContact() const;
 };
 
 #endif //EX01_PHONEBOOK_HPP
