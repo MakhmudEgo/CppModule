@@ -1,4 +1,3 @@
-
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
@@ -17,16 +16,14 @@ SRC =		megaphone.cpp
 
 FLAGS =		clang++ -Wall -Wextra -Werror
 
-OSRC =		$(SRC:.c=.o)
-
-HEADER =	philosophers.h
+OSRC =		$(SRC:.cpp=.o)
 
 all:		$(NAME)
 
 $(NAME):	$(OSRC)
 			$(FLAGS) $(OSRC) -o $(NAME)
 
-%.o:		%.c $(HEADER)
+%.o:		%.c
 			$(FLAGS) -c $< -o $@
 
 clean:
@@ -37,9 +34,4 @@ fclean:		clean
 
 re:			fclean all
 
-n:
-			norminette *.c *.h
-s:
-			wc *.c *.h
-
-.PHONY:		all clean fclean re n s
+.PHONY:		all clean fclean re

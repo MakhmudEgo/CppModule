@@ -1,11 +1,3 @@
-/*
- *
- *
- * ex 00
- *
- *
- */
-
 #include <iostream>
 #include <cctype>
 
