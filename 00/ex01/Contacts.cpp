@@ -23,16 +23,27 @@ void Contacts::getContact(const size_t& index, const size_t& isFull) const {// <
 	if (isFull)
 	{
 		std::cout <<
+		"First Name" << std::endl <<
 		this->_FirstName << std::endl <<
+		"Last Name" << std::endl <<
 		this->_LastName  << std::endl <<
+		"Nick Name" << std::endl <<
 		this->_NickName  << std::endl <<
+		"Login" << std::endl <<
 		this->_Login  << std::endl <<
+		"Postal Address" << std::endl <<
 		this->_PostalAddress  << std::endl <<
+		"Email" << std::endl <<
 		this->_Email  << std::endl <<
+		"Number" << std::endl <<
 		this->_Number  << std::endl <<
+		"Birthday" << std::endl <<
 		this->_Birthday  << std::endl <<
+		"Favorite Meal" << std::endl <<
 		this->_FavoriteMeal  << std::endl <<
+		"Underwear Color" << std::endl <<
 		this->_UnderwearColor  << std::endl <<
+		"Darkest Secret" << std::endl <<
 		this->_DarkestSecret  << std::endl;
 	}
 	else
@@ -58,7 +69,7 @@ void Contacts::printContactLite(std::string _FirstName, std::string _LastName,
 		_NickName.resize(10, '.');
 	}
 	std::cout << std::right << std::setw(10) << index << "|"
-			  << std::right << std::setw(10) << _FirstName << "|"
-			  << std::right << std::setw(10) << _LastName << "|"
-			  << _NickName << std::endl;
+	<< std::right << std::setw(10) << _FirstName << "|"
+	<< std::right << std::setw(10) << _LastName << "|"
+	<< std::right << std::setw(10) << _NickName << std::endl;
 }

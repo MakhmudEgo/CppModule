@@ -19,7 +19,7 @@ void PhoneBook::getContact(const size_t& isFull, const size_t& input) const {
 			std::cout << std::right << std::setw(10) << "index" << "|"
 					  << std::right << std::setw(10) << "First Name" << "|"
 					  << std::right << std::setw(10) << "Last Name" << "|"
-					  << "Nick Name" << std::endl;
+					  << std::right << std::setw(10) << "Nick Name" << std::endl;
 		}
 		while (index < PhoneBook::_AmountContacts) {
 			this->_ContactList[index].getContact(index, 0);
