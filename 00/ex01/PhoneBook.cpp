@@ -6,7 +6,7 @@
 #include <iomanip>
 
 void PhoneBook::setContact(const std::string& str, const int &index) {
-	this->s[index] = str;
+	this->_InputData[index] = str;
 }
 
 void PhoneBook::getContact(const size_t& isFull, const size_t& input) const {
@@ -30,9 +30,6 @@ void PhoneBook::getContact(const size_t& isFull, const size_t& input) const {
 	}
 }
 
-PhoneBook::PhoneBook() {
-}
-
 size_t PhoneBook::_AmountContacts = 0;
 
 void PhoneBook::incAmountContacts() {
@@ -40,7 +37,7 @@ void PhoneBook::incAmountContacts() {
 }
 
 void PhoneBook::addContactInPhoneBook() {
-	this->_ContactList[PhoneBook::_AmountContacts].setContact(this->s);
+	this->_ContactList[PhoneBook::_AmountContacts].setContact(this->_InputData);
 }
 
 size_t &PhoneBook::getAmountContacts() {

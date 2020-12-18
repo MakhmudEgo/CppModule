@@ -1,4 +1,3 @@
-
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
@@ -15,19 +14,19 @@ NAME =	phonebook
 
 SRC =		main.cpp PhoneBook.cpp Contacts.cpp
 
-FLAGS =		clang++ -Wall -Wextra -Werror
+FLAGS =		-Wall -Wextra -Werror
 
-OSRC =		$(SRC:.c=.o)
+OSRC =		$(SRC:.cpp=.o)
 
 HEADER =	philosophers.h
 
 all:		$(NAME)
 
 $(NAME):	$(OSRC)
-			$(FLAGS) $(OSRC) -o $(NAME)
+			clang++ $(FLAGS) $(OSRC) -o $(NAME)
 
 %.o:		%.c $(HEADER)
-			$(FLAGS) -c $< -o $@
+			clang++ $(FLAGS) -c $< -o $@
 
 clean:
 			rm -rf  $(OSRC)
@@ -37,9 +36,4 @@ fclean:		clean
 
 re:			fclean all
 
-n:
-			norminette *.c *.h
-s:
-			wc *.c *.h
-
-.PHONY:		all clean fclean re n s
+.PHONY:		all clean fclean re

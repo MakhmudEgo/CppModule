@@ -1,5 +1,6 @@
 #include "PhoneBook.hpp"
 #include <iomanip>
+
 int main() {
 	PhoneBook Contacts;
 	int index;
@@ -16,9 +17,9 @@ int main() {
 		"birthday date",
 		"favorite meal",
 		"underwear color",
-		"darkest secret",
+		"darkest secret"
 	};
-	while (!(false))
+	while (cmd != "EXIT")
 	{
 		std::cout << "Type The Command: ADD, SEARCH or EXIT" << std::endl << "->";
 		std::cin >> cmd;
@@ -35,8 +36,6 @@ int main() {
 			Contacts.addContactInPhoneBook();
 			PhoneBook::incAmountContacts();
 		}
-		if (cmd == "EXIT")
-			break ;
 		if (cmd == "SEARCH")
 		{
 			Contacts.getContact(0, 0);
@@ -48,6 +47,5 @@ int main() {
 			}
 		}
 	}
-
 	return 0;
 }

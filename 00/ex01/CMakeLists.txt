@@ -3,9 +3,8 @@ project(ex01)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(ex01 main.cpp
+add_executable(ex01
+        main.cpp
         PhoneBook.cpp
-#        PhoneBook.hpp
         Contacts.cpp
-#        Contacts.hpp
         )
