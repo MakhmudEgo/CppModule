@@ -1,10 +1,7 @@
 #include "PhoneBook.hpp"
 #include <iomanip>
 int main() {
-	std::cout.width(5);
-	std::cout << "1";
-	std::cout << "123456789";
-/*	PhoneBook Contacts;
+	PhoneBook Contacts;
 	int index;
 	int input;
 	std::string cmd;
@@ -42,14 +39,15 @@ int main() {
 			break ;
 		if (cmd == "SEARCH")
 		{
-			Contacts.getContact();
+			Contacts.getContact(0, 0);
 			if (PhoneBook::getAmountContacts())
 			{
 				std::cout << "Type The Index" << std::endl << "->";
 				std::cin >> input;
+				Contacts.getContact(1, input);
 			}
 		}
-	}*/
+	}
 
 	return 0;
 }

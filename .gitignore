@@ -1,1 +1,10 @@
 *.DS_Store
+**/cmake-build-debug
+**/.idea
+*a.out
+*.o
+*.a
+**/.vscode
+*megafone
+*phonebook
+*a.out.dSYM

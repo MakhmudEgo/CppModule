@@ -10,15 +10,15 @@
 iostream
 -
 
+/Users/mizola/CppModule/00/ex01/PhoneBook.cpp
+PhoneBook.hpp
+/Users/mizola/CppModule/00/ex01/PhoneBook.hpp
+iomanip
+-
+
 /Users/mizola/CppModule/00/ex01/PhoneBook.hpp
 iostream
 -
 Contacts.hpp
 /Users/mizola/CppModule/00/ex01/Contacts.hpp
-
-/Users/mizola/CppModule/00/ex01/main.cpp
-PhoneBook.hpp
-/Users/mizola/CppModule/00/ex01/PhoneBook.hpp
-iomanip
--
 

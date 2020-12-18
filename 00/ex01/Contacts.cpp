@@ -19,9 +19,46 @@ void Contacts::setContact(const std::string *arrData) {
 	this->_DarkestSecret = arrData[10];
 }
 
-void Contacts::getContact(const size_t& index) const { // << std::left << std::setw(10)
+void Contacts::getContact(const size_t& index, const size_t& isFull) const {// << std::left << std::setw(10)
+	if (isFull)
+	{
+		std::cout <<
+		this->_FirstName << std::endl <<
+		this->_LastName  << std::endl <<
+		this->_NickName  << std::endl <<
+		this->_Login  << std::endl <<
+		this->_PostalAddress  << std::endl <<
+		this->_Email  << std::endl <<
+		this->_Number  << std::endl <<
+		this->_Birthday  << std::endl <<
+		this->_FavoriteMeal  << std::endl <<
+		this->_UnderwearColor  << std::endl <<
+		this->_DarkestSecret  << std::endl;
+	}
+	else
+		Contacts::printContactLite(this->_FirstName,
+		this->_LastName, this->_NickName, index);
+}
+
+void Contacts::printContactLite(std::string _FirstName, std::string _LastName,
+								std::string _NickName, const size_t &index) const {
+	if (_FirstName.size() > 10)
+	{
+		_FirstName.resize(9);
+		_FirstName.resize(10, '.');
+	}
+	if (_LastName.size() > 10)
+	{
+		_LastName.resize(9);
+		_LastName.resize(10, '.');
+	}
+	if (_NickName.size() > 10)
+	{
+		_NickName.resize(9);
+		_NickName.resize(10, '.');
+	}
 	std::cout << std::right << std::setw(10) << index << "|"
-	<< std::right << std::setw(10) << this->_FirstName << "|"
-	<< std::right << std::setw(10) << this->_LastName << "|"
-	<< this->_NickName << std::endl;
+			  << std::right << std::setw(10) << _FirstName << "|"
+			  << std::right << std::setw(10) << _LastName << "|"
+			  << _NickName << std::endl;
 }

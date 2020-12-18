@@ -21,8 +21,9 @@ private:
 	std::string _DarkestSecret;
 public:
 	void		setContact(const std::string *arrData);
-	void		getContact(const size_t& index) const;
+	void		getContact(const size_t& index, const size_t& isFull) const;
+	void		printContactLite(std::string _FirstName, std::string _LastName,
+								std::string _NickName, const size_t& index) const;
 };
-
 
 #endif //EX01_CONTACTS_HPP
