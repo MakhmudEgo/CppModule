@@ -5,6 +5,6 @@
 *.o
 *.a
 **/.vscode
-*megafone
+*megaphone
 *phonebook
 *a.out.dSYM
