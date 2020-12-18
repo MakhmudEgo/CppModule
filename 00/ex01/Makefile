@@ -18,14 +18,12 @@ FLAGS =		-Wall -Wextra -Werror
 
 OSRC =		$(SRC:.cpp=.o)
 
-HEADER =	philosophers.h
-
 all:		$(NAME)
 
 $(NAME):	$(OSRC)
 			clang++ $(FLAGS) $(OSRC) -o $(NAME)
 
-%.o:		%.c $(HEADER)
+%.o:		%.c
 			clang++ $(FLAGS) -c $< -o $@
 
 clean:
