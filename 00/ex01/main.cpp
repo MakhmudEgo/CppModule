@@ -4,7 +4,7 @@
 void	ifAdd(PhoneBook& Contacts, std::string& cmd)
 {
 	int index = 0;
-	std::string asks[11] = {
+	const std::string asks[11] = {
 		"first name",
 		"last name",
 		"nickname",
@@ -17,6 +17,7 @@ void	ifAdd(PhoneBook& Contacts, std::string& cmd)
 		"underwear color",
 		"darkest secret"
 	};
+
 	if (PhoneBook::getAmountContacts() != 8)
 	{
 		while (index != 11)
@@ -40,7 +41,7 @@ void	ifSearch(PhoneBook& Contacts, std::string& cmd)
 	{
 		int input = 0;
 		while (!input){
-			std::cout << "Type The Index From " << 1 << " to " << PhoneBook::getAmountContacts() << std::endl << "->";
+			std::cout << "Type The Index From " << 1 << " To " << PhoneBook::getAmountContacts() << std::endl << "->";
 			std::cin >> cmd;
 			try {
 				input = std::stoi(cmd);
