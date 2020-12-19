@@ -68,7 +68,7 @@ void Contacts::printContactLite(std::string _FirstName, std::string _LastName,
 		_NickName.resize(9);
 		_NickName.resize(10, '.');
 	}
-	std::cout << std::right << std::setw(10) << index << "|"
+	std::cout << std::right << std::setw(10) << index + 1 << "|"
 	<< std::right << std::setw(10) << _FirstName << "|"
 	<< std::right << std::setw(10) << _LastName << "|"
 	<< std::right << std::setw(10) << _NickName << std::endl;
