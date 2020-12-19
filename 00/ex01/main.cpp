@@ -33,7 +33,7 @@ void	ifAdd(PhoneBook& Contacts, std::string& cmd)
 	std::cerr << "PhoneBook Full" << std::endl;
 }
 
-void	isSearch(PhoneBook& Contacts, std::string& cmd)
+void	ifSearch(PhoneBook& Contacts, std::string& cmd)
 {
 	Contacts.getContact(0, 0);
 	if (PhoneBook::getAmountContacts())
@@ -71,7 +71,7 @@ int main() {
 		if (cmd == "ADD")
 			ifAdd(Contacts, cmd);
 		if (cmd == "SEARCH")
-			isSearch(Contacts, cmd);
+			ifSearch(Contacts, cmd);
 	}
 	return 0;
 }
