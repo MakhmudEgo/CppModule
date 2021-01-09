@@ -9,7 +9,7 @@ HumanA::HumanA(const std::string &szName, Weapon &wWeapon) : _wWeapon(wWeapon)
 	this->_szName = szName;
 }
 
-void HumanA::attack()
+void HumanA::attack() const
 {
 	std::cout << this->_szName << " attacks with his " << this->_wWeapon.getType() << std::endl;
 }

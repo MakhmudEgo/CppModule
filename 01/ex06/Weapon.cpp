@@ -14,6 +14,7 @@ void Weapon::setType(const std::string& szType)
 	this->_szType = szType;
 }
 
-Weapon::Weapon(const std::string& szType) {
+Weapon::Weapon(const std::string& szType)
+{
 	this->_szType = szType;
 }

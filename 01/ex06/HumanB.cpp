@@ -9,7 +9,7 @@ HumanB::HumanB(const std::string &szName)
 	this->_szName = szName;
 }
 
-void HumanB::attack()
+void HumanB::attack() const
 {
 	std::cout << this->_szName << " attacks with his " << this->_wWeapon->getType() << std::endl;
 }
