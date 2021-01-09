@@ -30,11 +30,7 @@ ZombieHorde::ZombieHorde(int nAmountZombie)
 
 ZombieHorde::~ZombieHorde()
 {
-	std::cout << "call ZombieHorde Destructor" << std::endl;
-}
-
-void ZombieHorde::Clear()
-{
+	std::cout << "call ZombieHorde Destructor" << std::endl << std::endl;
 	for (int i = 0; i < this->_nAmountZombie; ++i)
 	{
 		delete this->ppzZombie[i];

@@ -13,8 +13,6 @@ public:
 
 	~ZombieHorde();
 
-	void Clear();
-
 	void announce() const;
 
 private:

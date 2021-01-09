@@ -56,6 +56,4 @@ int main()
 	std::cout << std::endl;
 	hello.announce();
 	std::cout << std::endl;
-	hello.Clear();
-	std::cout << std::endl;
 }
