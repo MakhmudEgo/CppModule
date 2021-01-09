@@ -6,6 +6,7 @@
 
 ZombieHorde::ZombieHorde(int nAmountZombie)
 {
+	std::cout << "call ZombieHorde Constructor" << std::endl << std::endl;
 	this->_nAmountZombie = nAmountZombie;
 	std::string ppszTypes[] = {
 			"gangster", "police", "doctor",
@@ -24,8 +25,6 @@ ZombieHorde::ZombieHorde(int nAmountZombie)
 	{
 		zZombieEvent.setZombieType(ppszTypes[rand() % 6]);
 		ppzZombie[i] = zZombieEvent.newZombie(ppszNames[rand() % 8]);
-		ppzZombie[i]->announce();
-		std::cout << std::endl;
 	}
 }
 
@@ -41,4 +40,12 @@ void ZombieHorde::Clear()
 		delete this->ppzZombie[i];
 	}
 	delete this->ppzZombie;
+}
+
+void ZombieHorde::announce() const
+{
+	for (int i = 0; i < _nAmountZombie; ++i)
+	{
+		this->ppzZombie[i]->announce();
+	}
 }

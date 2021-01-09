@@ -53,5 +53,9 @@ int main()
 	int nAmountZombie = 7;
 
 	ZombieHorde hello(nAmountZombie);
+	std::cout << std::endl;
+	hello.announce();
+	std::cout << std::endl;
 	hello.Clear();
+	std::cout << std::endl;
 }

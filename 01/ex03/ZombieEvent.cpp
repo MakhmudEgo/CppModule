@@ -9,7 +9,7 @@ void ZombieEvent::setZombieType(const std::string &szNewType)
 	this->_szType = szNewType;
 }
 
-Zombie *ZombieEvent::newZombie(std::string name)
+Zombie *ZombieEvent::newZombie(std::string name) const
 {
 	Zombie *zZombie = new Zombie(name, this->_szType);
 

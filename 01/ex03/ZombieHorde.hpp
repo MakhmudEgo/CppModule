@@ -15,6 +15,8 @@ public:
 
 	void Clear();
 
+	void announce() const;
+
 private:
 	Zombie **ppzZombie;
 	int _nAmountZombie;

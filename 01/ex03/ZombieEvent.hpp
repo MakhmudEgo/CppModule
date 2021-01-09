@@ -8,7 +8,7 @@
 
 class ZombieEvent {
 public:
-	Zombie* newZombie(std::string name);
+	Zombie* newZombie(std::string name) const;
 
 	void setZombieType(const std::string& szNewType);
 
