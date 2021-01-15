@@ -6,6 +6,7 @@
 # define FRAGTRAP_HPP
 
 # include <iostream>
+#
 
 class FragTrap {
 public:
@@ -20,6 +21,8 @@ public:
 	void beRepaired(unsigned int amount);
 
 	void vaulthunter_dot_exe(std::string const & target);
+
+	std::string getRandomFunnyQuote() const;
 private:
 	int _HitPoint;
 	int _MaxHitPoints;
