@@ -12,6 +12,8 @@ class FragTrap {
 public:
 	FragTrap(const std::string& Name);
 
+	~FragTrap();
+
 	void rangedAttack(std::string const & target);
 
 	void meleeAttack(std::string const & target);

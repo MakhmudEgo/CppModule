@@ -15,6 +15,12 @@ FragTrap::FragTrap(const std::string& Name)
 	_MeleeAttackDamage = 30;
 	_RangedAttackDamage = 20;
 	_ArmorDamageReduction = 5;
+	std::cout << "The Superhero " << this->_Name << " was born:)" << std::endl;
+}
+
+FragTrap::~FragTrap()
+{
+	std::cout << "The Superhero " << this->_Name << " died:(" << std::endl;
 }
 
 void FragTrap::rangedAttack(const std::string &target)
