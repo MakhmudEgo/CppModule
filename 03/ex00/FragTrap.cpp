@@ -68,6 +68,13 @@ void FragTrap::beRepaired(unsigned int amount)
 
 void FragTrap::vaulthunter_dot_exe(const std::string &target)
 {
+	const std::string pszAttack[] = {
+			"in a friendly way",
+			"with a sense of love",
+			"closing my eyes and lowering my head",
+			"singing along to katyusha",
+			"not comment"
+	};
 	if (this->_EnergyPoints < 25)
 	{
 		std::cout << "not enough Energy Points, yu yuy u yu yu!" << std::endl;
@@ -75,7 +82,7 @@ void FragTrap::vaulthunter_dot_exe(const std::string &target)
 	else
 	{
 		std::cout << "FR4G-TP " << this->_Name << " attacks " <<
-		target << " causing " << 1 + rand() % 99 << " points of damage!" << std::endl
+		target << ' ' << pszAttack[rand() % 5] <<" causing " << 1 + rand() % 99 << " points of damage!" << std::endl
 		<< getRandomFunnyQuote() << std::endl;
 		this->_EnergyPoints -= 25;
 	}
