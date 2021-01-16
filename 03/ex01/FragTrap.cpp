@@ -50,17 +50,17 @@ FragTrap::~FragTrap()
 void FragTrap::rangedAttack(const std::string &target)
 {
 	std::cout << "FR4G-TP " << this->_Name << " attacks " <<
-			  target << " at range, causing " << this->_RangedAttackDamage <<
-			  " points of damage!" << std::endl
-			  << getRandomFunnyQuote() << std::endl;
+	target << " at range, causing " << this->_RangedAttackDamage <<
+	" points of damage!" << std::endl
+	<< getRandomFunnyQuote() << std::endl;
 }
 
 void FragTrap::meleeAttack(const std::string &target)
 {
 	std::cout << "FR4G-TP " << this->_Name << " attacks " <<
-			  target << " at melee, causing " << this->_MeleeAttackDamage <<
-			  " points of damage!" << std::endl
-			  << getRandomFunnyQuote() << std::endl;
+	target << " at melee, causing " << this->_MeleeAttackDamage <<
+	" points of damage!" << std::endl
+	<< getRandomFunnyQuote() << std::endl;
 
 }
 
@@ -73,7 +73,7 @@ void FragTrap::takeDamage(unsigned int amount)
 	else
 	{
 		std::cout << "FR4G-TP " << this->_Name << " take " <<
-				  amount << " damage, lol!" << std::endl;
+		amount << " damage, lol!" << std::endl;
 		this->_HitPoint -= ((int)amount - this->_ArmorDamageReduction);
 		this->_HitPoint = this->_HitPoint < 0 ? 0 : this->_HitPoint;
 	}
@@ -88,7 +88,7 @@ void FragTrap::beRepaired(unsigned int amount)
 	else
 	{
 		std::cout << "FR4G-TP " << this->_Name << " be repaired " <<
-				  amount << " Hit Points, kek!" << std::endl;
+		amount << " Hit Points, kek!" << std::endl;
 		this->_HitPoint += (int)amount;
 		this->_HitPoint = this->_HitPoint > this->_MaxHitPoints ? this->_MaxHitPoints : this->_HitPoint;
 	}
@@ -110,9 +110,9 @@ void FragTrap::vaulthunter_dot_exe(const std::string &target)
 	else
 	{
 		std::cout << "FR4G-TP " << this->_Name << " attacks " <<
-				  target << ' ' << pszAttack[rand() % 5] << " causing " <<
-				  1 + rand() % 99 << " points of damage!" << std::endl
-				  << getRandomFunnyQuote() << std::endl;
+		target << ' ' << pszAttack[rand() % 5] << " causing " <<
+		1 + rand() % 99 << " points of damage!" << std::endl
+		<< getRandomFunnyQuote() << std::endl;
 		this->_EnergyPoints -= 25;
 	}
 }

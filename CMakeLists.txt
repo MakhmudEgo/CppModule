@@ -8,5 +8,7 @@ add_executable(DAY03 03/exp.cpp)
 
 add_executable(DAY03EX00 03/ex00/main.cpp 03/ex00/FragTrap.cpp 03/ex00/FragTrap.hpp)
 
+add_executable(DAY03EX01 03/ex01/main.cpp 03/ex01/FragTrap.cpp 03/ex01/FragTrap.hpp 03/ex01/ScavTrap.cpp 03/ex01/ScavTrap.hpp)
+
 add_executable(CppModule
         main.cpp)

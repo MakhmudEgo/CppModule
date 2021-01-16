@@ -6,6 +6,7 @@
 # define FRAGTRAP_HPP
 
 # include <iostream>
+#
 
 class FragTrap {
 public:

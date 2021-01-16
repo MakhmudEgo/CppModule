@@ -2,7 +2,7 @@
 // Created by Mahmud Jego on 1/13/21.
 //
 
-#include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main()
 {
@@ -20,6 +20,18 @@ int main()
 	fragtrap.vaulthunter_dot_exe("Galiza");
 
 	FragTrap galiza("Galiza");
+
+	// ScavTrap
+	ScavTrap scavTrap("Scopycat");
+	scavTrap.meleeAttack("Galiza");
+	scavTrap.rangedAttack("Galiza");
+	scavTrap.takeDamage(20);
+	scavTrap.beRepaired(20);
+	scavTrap.challengeNewcomer();
+	scavTrap.challengeNewcomer();
+	scavTrap.challengeNewcomer();
+	scavTrap.challengeNewcomer();
+	scavTrap.challengeNewcomer();
 
 	return (0);
 }

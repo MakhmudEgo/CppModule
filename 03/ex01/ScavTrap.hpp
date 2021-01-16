@@ -1,21 +1,21 @@
 //
-// Created by Mahmud Jego on 1/13/21.
+// Created by Mahmud Jego on 1/16/21.
 //
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef SCAVTRAP_HPP
+#define SCAVTRAP_HPP
 
-# include <iostream>
+# include "FragTrap.hpp"
 
-class FragTrap {
+class ScavTrap {
 public:
-	FragTrap(const std::string& Name);
+	ScavTrap(const std::string& Name);
 
-	FragTrap(const FragTrap& fragTrap);
+	ScavTrap(const ScavTrap& fragTrap);
 
-	FragTrap& operator=(const FragTrap& fragTrap);
+	ScavTrap& operator=(const ScavTrap& fragTrap);
 
-	~FragTrap();
+	~ScavTrap();
 
 	void rangedAttack(std::string const & target);
 
@@ -25,7 +25,7 @@ public:
 
 	void beRepaired(unsigned int amount);
 
-	void vaulthunter_dot_exe(std::string const & target);
+	void challengeNewcomer() const;
 
 private:
 	int _HitPoint;
@@ -42,4 +42,4 @@ private:
 };
 
 
-#endif //FRAGTRAP_HPP
+#endif //SCAVTRAP_HPP

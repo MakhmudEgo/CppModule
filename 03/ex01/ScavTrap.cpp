@@ -1,32 +1,32 @@
 //
-// Created by Mahmud Jego on 1/13/21.
+// Created by Mahmud Jego on 1/16/21.
 //
 
-#include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
-FragTrap::FragTrap(const std::string& Name)
+ScavTrap::ScavTrap(const std::string& Name)
 {
 	_HitPoint = 100;
 	_MaxHitPoints = 100;
-	_EnergyPoints = 100;
-	_MaxEnergyPoints = 100;
+	_EnergyPoints = 50;
+	_MaxEnergyPoints = 50;
 	_Level = 1;
 	_Name = Name;
-	_MeleeAttackDamage = 30;
-	_RangedAttackDamage = 20;
-	_ArmorDamageReduction = 5;
-	std::cout << "The Superhero FragTrap, " << this->_Name << " was born:)" << std::endl;
+	_MeleeAttackDamage = 20;
+	_RangedAttackDamage = 15;
+	_ArmorDamageReduction = 3;
+	std::cout << "The Superhero ScavTrap, " << this->_Name << " was born:)" << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap & fragTrap)
+ScavTrap::ScavTrap(const ScavTrap & fragTrap)
 {
-	std::cout << "Copy FragTrap constructor called" << std::endl;
+	std::cout << "Copy ScavTrap constructor called" << std::endl;
 	operator=(fragTrap);
 }
 
-FragTrap &FragTrap::operator=(const FragTrap &fragTrap)
+ScavTrap &ScavTrap::operator=(const ScavTrap &fragTrap)
 {
-	std::cout << "FragTrap Assignation operator called" << std::endl;
+	std::cout << "ScavTrap Assignation operator called" << std::endl;
 	if (this != &fragTrap)
 	{
 		this->_HitPoint = fragTrap._HitPoint;
@@ -42,12 +42,12 @@ FragTrap &FragTrap::operator=(const FragTrap &fragTrap)
 	return (*this);
 }
 
-FragTrap::~FragTrap()
+ScavTrap::~ScavTrap()
 {
-	std::cout << "The Superhero FragTrap " << this->_Name << " died:(" << std::endl;
+	std::cout << "The Superhero ScavTrap " << this->_Name << " died:(" << std::endl;
 }
 
-void FragTrap::rangedAttack(const std::string &target)
+void ScavTrap::rangedAttack(const std::string &target)
 {
 	std::cout << "FR4G-TP " << this->_Name << " attacks " <<
 			  target << " at range, causing " << this->_RangedAttackDamage <<
@@ -55,7 +55,7 @@ void FragTrap::rangedAttack(const std::string &target)
 			  << getRandomFunnyQuote() << std::endl;
 }
 
-void FragTrap::meleeAttack(const std::string &target)
+void ScavTrap::meleeAttack(const std::string &target)
 {
 	std::cout << "FR4G-TP " << this->_Name << " attacks " <<
 			  target << " at melee, causing " << this->_MeleeAttackDamage <<
@@ -64,7 +64,7 @@ void FragTrap::meleeAttack(const std::string &target)
 
 }
 
-void FragTrap::takeDamage(unsigned int amount)
+void ScavTrap::takeDamage(unsigned int amount)
 {
 	if (this->_HitPoint <= 0)
 	{
@@ -79,7 +79,7 @@ void FragTrap::takeDamage(unsigned int amount)
 	}
 }
 
-void FragTrap::beRepaired(unsigned int amount)
+void ScavTrap::beRepaired(unsigned int amount)
 {
 	if (this->_HitPoint >= this->_MaxHitPoints)
 	{
@@ -94,30 +94,7 @@ void FragTrap::beRepaired(unsigned int amount)
 	}
 }
 
-void FragTrap::vaulthunter_dot_exe(const std::string &target)
-{
-	const std::string pszAttack[] = {
-			"in a friendly way",
-			"with a sense of love",
-			"closing my eyes and lowering my head",
-			"singing along to katyusha",
-			"not comment"
-	};
-	if (this->_EnergyPoints < 25)
-	{
-		std::cout << "not enough Energy Points, yu yuy u yu yu!" << std::endl;
-	}
-	else
-	{
-		std::cout << "FR4G-TP " << this->_Name << " attacks " <<
-				  target << ' ' << pszAttack[rand() % 5] << " causing " <<
-				  1 + rand() % 99 << " points of damage!" << std::endl
-				  << getRandomFunnyQuote() << std::endl;
-		this->_EnergyPoints -= 25;
-	}
-}
-
-std::string FragTrap::getRandomFunnyQuote() const
+std::string ScavTrap::getRandomFunnyQuote() const
 {
 	std::string pszQuotes[] = {
 			"Boogie time!",
@@ -131,4 +108,17 @@ std::string FragTrap::getRandomFunnyQuote() const
 			"I brought you a present: EXPLOSIONS!"
 	};
 	return (pszQuotes[rand() % 9]);
+}
+
+void ScavTrap::challengeNewcomer() const
+{
+	const std::string pszQuotes[] = {
+			"I can take ya!.. I think.",
+			"Ow, what was that for?",
+			"Oh, it's on now!",
+			"You wanna fight with me?! Put 'em up!.. Put 'em up?",
+			"A million baddies, and you wanna hit me? Aww!",
+			"Now? But I... I just... okay..."
+	};
+	std::cout << "FR4G-TP " << this->_Name << ' ' << pszQuotes[rand() % 6] << std::endl;
 }
