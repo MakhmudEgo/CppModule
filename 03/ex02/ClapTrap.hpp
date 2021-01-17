@@ -5,17 +5,29 @@
 #ifndef CLAPTRAP_HPP
 #define CLAPTRAP_HPP
 
-#include "ScavTrap.hpp"
+#include <iostream>
 
 class ClapTrap {
 public:
+	ClapTrap(
+			const std::string& Name,
+			const int& HitPoint,
+			const int& MaxHitPoints,
+			const int& EnergyPoints,
+			const int& MaxEnergyPoints,
+			const int& Level,
+			const int& MeleeAttackDamage,
+			const int& RangedAttackDamage,
+			const int& ArmorDamageReduction
+			);
+	ClapTrap(const ClapTrap& clapTrap);
+	~ClapTrap();
+	ClapTrap& operator=(const ClapTrap& clapTrap);
 	void rangedAttack(std::string const & target);
-
 	void meleeAttack(std::string const & target);
-
 	void takeDamage(unsigned int amount);
-
 	void beRepaired(unsigned int amount);
+
 protected:
 	int _HitPoint;
 	int _MaxHitPoints;
@@ -29,6 +41,5 @@ protected:
 
 	std::string getRandomFunnyQuote() const;
 };
-
 
 #endif //CLAPTRAP_HPP
