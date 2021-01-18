@@ -11,9 +11,13 @@ int main()
 {
 	srand(time(NULL));
 
-/*	FragTrap galiza("Galiza");
+	FragTrap galiza("Galiza");
 	ScavTrap scopycat("Scopycat");
 	ClapTrap clapTrap("King", 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000);
+	clapTrap.meleeAttack("Scopycat");
+	clapTrap.rangedAttack("Scopycat");
+	clapTrap.takeDamage(20);
+	clapTrap.beRepaired(20);
 
 	// FragTrap
 	FragTrap fragtrap("Monkey");
@@ -37,15 +41,21 @@ int main()
 	scavTrap.challengeNewcomer();
 	scavTrap.challengeNewcomer();
 	scavTrap.challengeNewcomer();
-	scavTrap.challengeNewcomer();*/
+	scavTrap.challengeNewcomer();
 
 	NinjaTrap ego("Ego");
 	NinjaTrap king("King");
 
-	king.ninjaShoebox(ego);
-	king.ninjaShoebox(ego);
-	king.ninjaShoebox(ego);
-
+	//Fragtrap
+	king.ninjaShoebox(galiza);
+	//ScavTrap
+	king.ninjaShoebox(scopycat);
+	//ClapTrap
+	king.ninjaShoebox(clapTrap);
+	king.meleeAttack("Scopycat");
+	king.rangedAttack("Scopycat");
+	king.takeDamage(20);
+	king.beRepaired(20);
 
 	return (0);
 }

@@ -22,5 +22,4 @@ public:
 	void ninjaShoebox(ScavTrap& scavTrap);
 };
 
-
 #endif //NINJATRAP_HPP

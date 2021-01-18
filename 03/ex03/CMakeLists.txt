@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.17)
-project(ex01)
+project(d3e03)
 
 set(CMAKE_CXX_STANDARD 98)
+set(CMAKE_CXX_FLAGS "-Wall -Werror -Wextra" )
 
 include_directories(.)
 

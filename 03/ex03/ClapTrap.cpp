@@ -69,7 +69,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
 	if (this->_HitPoint >= this->_MaxHitPoints)
 	{
-		std::cout << "FR4G-TP: " << this->_Name" Hit Point " << this->_HitPoint << std::endl;
+		std::cout << "FR4G-TP: " << this->_Name << " Hit Point " << this->_HitPoint << std::endl;
 	}
 	else
 	{

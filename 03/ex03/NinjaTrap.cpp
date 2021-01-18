@@ -47,7 +47,7 @@ void NinjaTrap::ninjaShoebox(NinjaTrap &ninjaTrap)
 			case 0:
 				if (!ninjaTrap.LifeCheck())
 				{
-					std::cout << "FR4G-TP: " << ninjaTrap.getName() << " died:) aue eeeee!"
+					std::cout << "FR4G-TP: " << ninjaTrap.getName() << " died:) aue eeeee!" << std::endl;
 				}
 				else if (this->_EnergyPoints >= 5)
 				{
@@ -63,7 +63,7 @@ void NinjaTrap::ninjaShoebox(NinjaTrap &ninjaTrap)
 			case 1:
 				if (!ninjaTrap.LifeCheck())
 				{
-					std::cout << "FR4G-TP: " << ninjaTrap.getName() << " died:) aue eeeee!"
+					std::cout << "FR4G-TP: " << ninjaTrap.getName() << " died:) aue eeeee!" << std::endl;
 				}
 				else if (this->_EnergyPoints >= 60)
 				{
@@ -92,7 +92,7 @@ void NinjaTrap::ninjaShoebox(ClapTrap &clapTrap)
 			case 0:
 				if (!clapTrap.LifeCheck())
 				{
-					std::cout << "FR4G-TP: " << clapTrap.getName() << " died:) aue eeeee!"
+					std::cout << "FR4G-TP: " << clapTrap.getName() << " died:) aue eeeee!" << std::endl;
 				}
 				else if (this->_EnergyPoints >= 5)
 				{
@@ -108,7 +108,7 @@ void NinjaTrap::ninjaShoebox(ClapTrap &clapTrap)
 			case 1:
 				if (!clapTrap.LifeCheck())
 				{
-					std::cout << "FR4G-TP: " << clapTrap.getName() << " died:) aue eeeee!"
+					std::cout << "FR4G-TP: " << clapTrap.getName() << " died:) aue eeeee!" << std::endl;
 				}
 				else if (this->_EnergyPoints >= 60)
 				{
@@ -131,10 +131,92 @@ void NinjaTrap::ninjaShoebox(ClapTrap &clapTrap)
 
 void NinjaTrap::ninjaShoebox(FragTrap &fragTrap)
 {
-
+	if (this->LifeCheck())
+	{
+		switch (rand() % 2)
+		{
+			case 0:
+				if (!fragTrap.LifeCheck())
+				{
+					std::cout << "FR4G-TP: " << fragTrap.getName() << " died:) aue eeeee!" << std::endl;
+				}
+				else if (this->_EnergyPoints >= 5)
+				{
+					this->rangedAttack(fragTrap.getName());
+					fragTrap.takeDamage(this->_RangedAttackDamage);
+					this->_EnergyPoints -= 5;
+				}
+				else
+				{
+					std::cout << "FR4G-TP: Oy ouo yoou yo y " << this->_Name << " not enough Energy Points!" << std::endl;
+				}
+				break ;
+			case 1:
+				if (!fragTrap.LifeCheck())
+				{
+					std::cout << "FR4G-TP: " << fragTrap.getName() << " died:) aue eeeee!" << std::endl;
+				}
+				else if (this->_EnergyPoints >= 60)
+				{
+					this->meleeAttack(fragTrap.getName());
+					fragTrap.takeDamage(this->_MeleeAttackDamage);
+					this->_EnergyPoints -= 60;
+				}
+				else
+				{
+					std::cout << "FR4G-TP: Oy ouo yoou yo y " << this->_Name << " not enough Energy Points!" << std::endl;
+				}
+				break ;
+		}
+	}
+	else
+	{
+		std::cout << "FR4G-TP: " << this->_Name << ": I can't attack, I'm dead! :(9(13" << std::endl;
+	}
 }
 
 void NinjaTrap::ninjaShoebox(ScavTrap &scavTrap)
 {
-
+	if (this->LifeCheck())
+	{
+		switch (rand() % 2)
+		{
+			case 0:
+				if (!scavTrap.LifeCheck())
+				{
+					std::cout << "FR4G-TP: " << scavTrap.getName() << " died:) aue eeeee!" << std::endl;
+				}
+				else if (this->_EnergyPoints >= 5)
+				{
+					this->rangedAttack(scavTrap.getName());
+					scavTrap.takeDamage(this->_RangedAttackDamage);
+					this->_EnergyPoints -= 5;
+				}
+				else
+				{
+					std::cout << "FR4G-TP: Oy ouo yoou yo y " << this->_Name << " not enough Energy Points!" << std::endl;
+				}
+				break ;
+			case 1:
+				if (!scavTrap.LifeCheck())
+				{
+					std::cout << "FR4G-TP: " << scavTrap.getName() << " died:) aue eeeee!" << std::endl;
+				}
+				else if (this->_EnergyPoints >= 60)
+				{
+					this->meleeAttack(scavTrap.getName());
+					scavTrap.takeDamage(this->_MeleeAttackDamage);
+					this->_EnergyPoints -= 60;
+				}
+				else
+				{
+					std::cout << "FR4G-TP: Oy ouo yoou yo y " << this->_Name << " not enough Energy Points!" << std::endl;
+				}
+				break ;
+		}
+	}
+	else
+	{
+		std::cout << "FR4G-TP: " << this->_Name << ": I can't attack, I'm dead! :(9(13" << std::endl;
+	}
 }

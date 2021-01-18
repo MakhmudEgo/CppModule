@@ -13,6 +13,10 @@ int main()
 	FragTrap galiza("Galiza");
 	ScavTrap scopycat("Scopycat");
 	ClapTrap clapTrap("King", 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000);
+	clapTrap.meleeAttack("Scopycat");
+	clapTrap.rangedAttack("Scopycat");
+	clapTrap.takeDamage(20);
+	clapTrap.beRepaired(20);
 
 	// FragTrap
 	FragTrap fragtrap("Monkey");
