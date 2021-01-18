@@ -6,6 +6,7 @@
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 #include "NinjaTrap.hpp"
+#include "SuperTrap.hpp"
 
 int main()
 {
@@ -58,6 +59,18 @@ int main()
 	king.rangedAttack("Scopycat");
 	king.takeDamage(20);
 	king.beRepaired(20);
+
+	SuperTrap superTrap("Mem");
+
+/*	SuperTrap Mike("Mike");
+	Mike.meleeAttack("Scopycat");
+	Mike.rangedAttack("Scopycat");
+	Mike.beRepaired(1);
+	Mike.ninjaShoebox(ego);
+	Mike.ninjaShoebox(galiza);
+	Mike.ninjaShoebox(scopycat);
+	Mike.ninjaShoebox(clapTrap);
+	Mike.vaulthunter_dot_exe("Scopycat");*/
 
 	return (0);
 }
