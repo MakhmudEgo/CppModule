@@ -48,5 +48,5 @@ void ScavTrap::challengeNewcomer() const
 			"A million baddies, and you wanna hit me? Aww!",
 			"Now? But I... I just... okay..."
 	};
-	std::cout << "FR4G-TP " << this->_Name << ' ' << pszQuotes[rand() % 6] << std::endl;
+	std::cout << "FR4G-TP: " << this->_Name << ' ' << pszQuotes[rand() % 6] << std::endl;
 }

@@ -53,7 +53,7 @@ void FragTrap::vaulthunter_dot_exe(const std::string &target)
 	}
 	else
 	{
-		std::cout << "FR4G-TP " << this->_Name << " attacks " <<
+		std::cout << "FR4G-TP: " << this->_Name << " attacks " <<
 		target << ' ' << pszAttack[rand() % 5] << " causing " <<
 		1 + rand() % 99 << " points of damage!" << std::endl
 		<< getRandomFunnyQuote() << std::endl;
