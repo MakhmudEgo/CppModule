@@ -9,7 +9,7 @@
 
 class ClapTrap {
 public:
-	ClapTrap();
+	ClapTrap(const std::string& Name);
 	ClapTrap(
 			const std::string& Name,
 			const int& HitPoint,

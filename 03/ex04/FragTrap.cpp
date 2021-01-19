@@ -16,6 +16,10 @@ FragTrap::FragTrap(const std::string& Name)
 : ClapTrap(Name, 100, 100, 100, 100, 1, 30, 20, 5)
 {
 	std::cout << "Constructor: The Superhero FragTrap, " << this->_Name << " was born:)" << std::endl;
+	this->_HitPoint = 100;
+	this->_MaxHitPoints = 100;
+	this->_RangedAttackDamage = 20;
+	this->_ArmorDamageReduction = 5;
 }
 
 FragTrap::FragTrap(const FragTrap & fragTrap) : ClapTrap(fragTrap)

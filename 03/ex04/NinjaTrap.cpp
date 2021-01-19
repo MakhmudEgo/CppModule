@@ -15,6 +15,9 @@ NinjaTrap::NinjaTrap(const std::string &Name)
 : ClapTrap(Name, 60, 60, 120, 120, 1, 60, 5, 0)
 {
 	std::cout << "Constructor: The Superhero NinjaTrap, " << this->_Name << " was born:)" << std::endl;
+	this->_EnergyPoints = 120;
+	this->_MaxEnergyPoints = 120;
+	this->_MeleeAttackDamage = 60;
 }
 
 NinjaTrap::NinjaTrap(const NinjaTrap &ninjaTrap) : ClapTrap(ninjaTrap)

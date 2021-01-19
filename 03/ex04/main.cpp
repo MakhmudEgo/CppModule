@@ -62,9 +62,9 @@ int main()
 
 	SuperTrap superTrap("Mem");
 
-/*	SuperTrap Mike("Mike");
+	SuperTrap Mike("Mike");
 	Mike.meleeAttack("Scopycat");
-	Mike.rangedAttack("Scopycat");
+/*	Mike.rangedAttack("Scopycat");
 	Mike.beRepaired(1);
 	Mike.ninjaShoebox(ego);
 	Mike.ninjaShoebox(galiza);

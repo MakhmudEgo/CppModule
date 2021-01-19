@@ -4,15 +4,15 @@
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap()
+ClapTrap::ClapTrap(const std::string& Name)
 {
-	std::cout << "Constructor: The Superhero ClapTrap, " << "DefaultName" << " was born:)" << std::endl;
+	std::cout << "Constructor: The Superhero ClapTrap, " << Name << " was born:)" << std::endl;
 	this->_HitPoint = 200;
 	this->_MaxHitPoints = 2500;
 	this->_EnergyPoints = 200;
 	this->_MaxEnergyPoints = 200;
 	this->_Level = 20;
-	this->_Name = "DefaultName";
+	this->_Name = Name;
 	this->_MeleeAttackDamage = 200;
 	this->_RangedAttackDamage = 200;
 	this->_ArmorDamageReduction = 2000;
