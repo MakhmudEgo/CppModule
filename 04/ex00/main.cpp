@@ -17,5 +17,30 @@ int main()
 	robert.polymorph(jim);
 	robert.polymorph(joe);
 
+	std::cout << std::endl << std::endl;
+	Peon hello("hello");
+	Peon bye(hello);
+	Peon maxi("maxy");
+	std::cout << std::endl << std::endl;
+	std::cout << hello << bye << maxi;
+	std::cout << std::endl << std::endl;
+	bye = maxi;
+	std::cout << hello << bye << maxi;
+	std::cout << std::endl << std::endl;
+
+	Sorcerer scopycat("Scopycat", "pfpfpfpf pf");
+	Sorcerer king("king", "yoyo");
+	std::cout << scopycat << king;
+	scopycat = king;
+	std::cout << scopycat << king;
+	std::cout << std::endl << std::endl;
+
+	Victim& lPeon = joe;
+	lPeon.getPolymorphed();
+	robert.polymorph(lPeon);
+
+	std::cout << std::endl << std::endl;
+
+
 	return 0;
 }
