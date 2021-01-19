@@ -64,13 +64,13 @@ int main()
 
 	SuperTrap Mike("Mike");
 	Mike.meleeAttack("Scopycat");
-/*	Mike.rangedAttack("Scopycat");
+	Mike.rangedAttack("Scopycat");
 	Mike.beRepaired(1);
 	Mike.ninjaShoebox(ego);
 	Mike.ninjaShoebox(galiza);
 	Mike.ninjaShoebox(scopycat);
 	Mike.ninjaShoebox(clapTrap);
-	Mike.vaulthunter_dot_exe("Scopycat");*/
+	Mike.vaulthunter_dot_exe("Scopycat");
 
 	return (0);
 }
