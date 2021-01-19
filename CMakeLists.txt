@@ -10,5 +10,7 @@ add_executable(DAY03EX00 03/ex00/main.cpp 03/ex00/FragTrap.cpp 03/ex00/FragTrap.
 
 add_executable(DAY03EX01 03/ex01/main.cpp 03/ex01/FragTrap.cpp 03/ex01/FragTrap.hpp 03/ex01/ScavTrap.cpp 03/ex01/ScavTrap.hpp)
 
+add_executable(d04e00 04/ex00/main.cpp 04/ex00/Sorcerer.cpp 04/ex00/Sorcerer.hpp 04/ex00/Victim.cpp 04/ex00/Victim.hpp 04/ex00/Peon.cpp 04/ex00/Peon.hpp)
+
 add_executable(CppModule
-        main.cpp 03/ex03/Hgjghjgh.cpp 03/ex03/Hgjghjgh.hpp 03/ex03/Gfhfghfgh.cpp 03/ex03/Gfhfghfgh.hpp)
+        main.cpp 04/ex00/main.cpp)
