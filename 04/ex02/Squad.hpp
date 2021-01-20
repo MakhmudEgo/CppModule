@@ -11,6 +11,13 @@ class Squad
 : public ISquad {
 public:
 	Squad();
+	~Squad();
+	int getCount() const;
+	ISpaceMarine *getUnit(int i) const;
+	int push(ISpaceMarine *marine);
+private:
+	int _AmountUnits;
+	ISpaceMarine *_iSpaceMarine;
 
 };
 

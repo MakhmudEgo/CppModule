@@ -10,14 +10,13 @@
 class TacticalMarine : public ISpaceMarine {
 public:
 	TacticalMarine();
-
+	TacticalMarine(const TacticalMarine&);
+	TacticalMarine& operator=(const TacticalMarine&);
 	virtual ~TacticalMarine();
-
 	ISpaceMarine* clone() const;
 	void battleCry() const;
 	void rangedAttack() const;
 	void meleeAttack() const;
 };
-
 
 #endif //TACTICALMARINE_HPP

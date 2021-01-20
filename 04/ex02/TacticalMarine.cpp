@@ -4,19 +4,32 @@
 
 #include "TacticalMarine.hpp"
 
-ISpaceMarine *TacticalMarine::clone() const
-{
-	return (new TacticalMarine);
-}
-
 TacticalMarine::TacticalMarine()
 {
 	std::cout << "Tactical Marine ready for battle!" << std::endl;
 }
 
+TacticalMarine::TacticalMarine(const TacticalMarine &tacticalMarine)
+{
+	std::cout << "Tactical Marine ready for battle!" << std::endl;
+	operator=(tacticalMarine);
+}
+
+TacticalMarine &TacticalMarine::operator=(const TacticalMarine &tacticalMarine)
+{
+	if (this != &tacticalMarine)
+		return (*this);
+	return (*this);
+}
+
 TacticalMarine::~TacticalMarine()
 {
 	std::cout << "Aaargh..." << std::endl;
+}
+
+ISpaceMarine *TacticalMarine::clone() const
+{
+	return (new TacticalMarine);
 }
 
 void TacticalMarine::battleCry() const
@@ -31,5 +44,5 @@ void TacticalMarine::rangedAttack() const
 
 void TacticalMarine::meleeAttack() const
 {
-	
+	std::cout << "* attacks with a chainsword *" << std::endl;
 }

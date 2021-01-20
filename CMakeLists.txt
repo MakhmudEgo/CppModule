@@ -14,7 +14,9 @@ add_executable(d04e00 04/ex00/main.cpp 04/ex00/Sorcerer.cpp 04/ex00/Sorcerer.hpp
 
 add_executable(d04e01 04/ex01/AWeapon.cpp 04/ex01/AWeapon.hpp 04/ex01/PlasmaRifle.cpp 04/ex01/PlasmaRifle.hpp 04/ex01/PowerFist.cpp 04/ex01/PowerFist.hpp 04/ex01/main.cpp 04/ex01/Enemy.cpp 04/ex01/Enemy.hpp 04/ex01/SuperMutant.cpp 04/ex01/SuperMutant.hpp 04/ex01/RadScorpion.cpp 04/ex01/RadScorpion.hpp 04/ex01/Character.cpp 04/ex01/Character.hpp)
 
-add_executable(d04e02 04/ex02/main.cpp 04/ex02/ISquad.hpp 04/ex02/ISpaceMarine.hpp 04/ex02/Squad.cpp 04/ex02/Squad.hpp 04/ex02/TacticalMarine.cpp 04/ex02/TacticalMarine.hpp)
+add_executable(d04e02 04/ex02/main.cpp
+        04/ex02/ISquad.hpp 04/ex02/ISpaceMarine.hpp 04/ex02/Squad.cpp 04/ex02/Squad.hpp
+        04/ex02/TacticalMarine.cpp 04/ex02/TacticalMarine.hpp 04/ex02/AssaultTerminator.cpp)
 
 add_executable(CppModule main.cpp)
 
