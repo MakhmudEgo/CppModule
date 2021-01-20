@@ -16,13 +16,11 @@ Peon::~Peon()
 
 void Peon::getPolymorphed() const
 {
-	std::cout << this->_Name <<" has been turned into a pink pony!" << std::endl;
+	std::cout << this->getName() <<" has been turned into a pink pony!" << std::endl;
 }
 
 Peon &Peon::operator=(const Peon &peon)
 {
-	if (this != &peon)
-	{}
 	Victim::operator=(peon);
 	return (*this);
 }

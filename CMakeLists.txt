@@ -12,5 +12,8 @@ add_executable(DAY03EX01 03/ex01/main.cpp 03/ex01/FragTrap.cpp 03/ex01/FragTrap.
 
 add_executable(d04e00 04/ex00/main.cpp 04/ex00/Sorcerer.cpp 04/ex00/Sorcerer.hpp 04/ex00/Victim.cpp 04/ex00/Victim.hpp 04/ex00/Peon.cpp 04/ex00/Peon.hpp)
 
-add_executable(CppModule
-        main.cpp 04/ex00/main.cpp)
+add_executable(d04e01 04/ex01/AWeapon.cpp 04/ex01/AWeapon.hpp 04/ex01/PlasmaRifle.cpp 04/ex01/PlasmaRifle.hpp 04/ex01/PowerFist.cpp 04/ex01/PowerFist.hpp 04/ex01/main.cpp 04/ex01/Enemy.cpp 04/ex01/Enemy.hpp 04/ex01/SuperMutant.cpp 04/ex01/SuperMutant.hpp 04/ex01/RadScorpion.cpp 04/ex01/RadScorpion.hpp 04/ex01/Character.cpp 04/ex01/Character.hpp)
+
+add_executable(CppModule main.cpp)
+
+add_executable(ABSTRACT ABSTRACT.cpp)
