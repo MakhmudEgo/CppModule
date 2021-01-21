@@ -30,6 +30,30 @@ int main()
 	delete cloneAssa;
 	std::cout << std::endl << std::endl;
 
+	std::cout << "COPY AND ASSIG TEST" << std::endl;
+	Squad squad;
+	squad.push(tacticalMarine.clone());
+	squad.push(assaultTerminator.clone());
+	ISpaceMarine* testSquad = squad.getUnit(0);
+	ISpaceMarine* testSquad1 = squad.getUnit(1);
+	testSquad->rangedAttack();
+	testSquad1->rangedAttack();
+	testSquad->battleCry();
+	testSquad1->battleCry();
+	Squad squad1;
+	squad1 = squad;
+	Squad squad2(squad1);
+	std::cout << squad.getCount() << std::endl;
+	std::cout << squad1.getCount() << std::endl;
+	std::cout << squad2.getCount() << std::endl;
+	squad.getUnit(0)->battleCry();
+	squad1.getUnit(0)->battleCry();
+	squad2.getUnit(0)->battleCry();
+	squad.getUnit(1)->battleCry();
+	squad1.getUnit(1)->battleCry();
+	squad2.getUnit(1)->battleCry();
+	std::cout << std::endl << std::endl;
+
 	ISpaceMarine* bob = new TacticalMarine;
 	ISpaceMarine* jim = new AssaultTerminator;
 	ISquad* vlc = new Squad;

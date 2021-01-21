@@ -11,6 +11,8 @@ class Squad
 : public ISquad {
 public:
 	Squad();
+	Squad(const Squad&);
+	Squad& operator=(const Squad&);
 	~Squad();
 	int getCount() const;
 	ISpaceMarine *getUnit(int i) const;

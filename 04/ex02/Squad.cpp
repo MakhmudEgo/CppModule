@@ -8,6 +8,30 @@ Squad::Squad()
 : _AmountUnits(0), _iSpaceMarine(nullptr)
 {}
 
+Squad::Squad(const Squad &squad) : _AmountUnits(0), _iSpaceMarine(nullptr)
+{
+	operator=(squad);
+}
+
+Squad &Squad::operator=(const Squad &squad)
+{
+	if (this != &squad && squad.getCount())
+	{
+		for (int i = 0; i < this->_AmountUnits; ++i)
+		{
+			delete this->_iSpaceMarine[i];
+		}
+		delete this->_iSpaceMarine;
+		this->_iSpaceMarine = new ISpaceMarine*[squad._AmountUnits];
+		for (int i = 0; i < squad._AmountUnits; ++i)
+		{
+			this->_iSpaceMarine[i] = squad._iSpaceMarine[i]->clone();
+		}
+		this->_AmountUnits = squad._AmountUnits;
+	}
+	return (*this);
+}
+
 Squad::~Squad()
 {
 	if (this->_AmountUnits)
@@ -47,3 +71,4 @@ int Squad::push(ISpaceMarine *marine)
 	this->_iSpaceMarine = tmp;
 	return (this->_AmountUnits);
 }
+
