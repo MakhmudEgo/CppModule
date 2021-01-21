@@ -17,7 +17,7 @@ public:
 	int push(ISpaceMarine *marine);
 private:
 	int _AmountUnits;
-	ISpaceMarine *_iSpaceMarine;
+	ISpaceMarine **_iSpaceMarine;
 
 };
 
