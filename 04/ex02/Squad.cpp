@@ -27,7 +27,7 @@ int Squad::getCount() const
 
 ISpaceMarine *Squad::getUnit(int i) const
 {
-	if (i < this->_AmountUnits)
+	if (i < this->_AmountUnits && i > -1)
 		return (this->_iSpaceMarine[i]);
 	return (nullptr);
 }
