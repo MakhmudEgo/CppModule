@@ -18,6 +18,10 @@ add_executable(d04e02 04/ex02/main.cpp
         04/ex02/ISquad.hpp 04/ex02/ISpaceMarine.hpp 04/ex02/Squad.cpp 04/ex02/Squad.hpp
         04/ex02/TacticalMarine.cpp 04/ex02/TacticalMarine.hpp 04/ex02/AssaultTerminator.cpp)
 
+add_executable(d04e03 04/ex03/main.cpp
+        04/ex03/AMateria.cpp 04/ex03/AMateria.hpp
+        04/ex03/ICharacter.hpp 04/ex03/IMateriaSource.hpp 04/ex03/Ice.cpp 04/ex03/Ice.hpp 04/ex03/Cure.cpp 04/ex03/Cure.hpp 04/ex03/Character.cpp 04/ex03/Character.hpp)
+
 add_executable(CppModule main.cpp)
 
 add_executable(ABSTRACT ABSTRACT.cpp 04/ex02/main.cpp)
