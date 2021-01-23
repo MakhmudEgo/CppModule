@@ -17,4 +17,4 @@ add_executable(d04e03
         Ice.hpp
         ICharacter.hpp
         IMateriaSource.hpp
-        main.cpp)
+        main.cpp MateriaSource.cpp MateriaSource.hpp)

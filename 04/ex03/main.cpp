@@ -4,7 +4,7 @@
 
 
 #include "Character.hpp"
-
+#include "MateriaSource.hpp"
 
 int main()
 {
@@ -54,5 +54,42 @@ int main()
 	delete aMateria3;*/
 	std::cout << std::endl << std::endl;
 
+	AMateria *aMateria5 = new Ice;
+	AMateria *aMateria6 = new Cure;
+	AMateria *aMateria7 = new Cure;
+	AMateria *aMateria8 = new Ice;
+	AMateria *aMateria9 = new Ice;
 
+	MateriaSource materiaSource;
+	materiaSource.learnMateria(aMateria5);
+	materiaSource.learnMateria(aMateria6);
+	materiaSource.learnMateria(aMateria7);
+	materiaSource.learnMateria(aMateria8);
+	materiaSource.learnMateria(aMateria9);
+
+	AMateria *aMateria10 = materiaSource.createMateria("ice");
+	std::cout << aMateria10->getType() << std::endl;
+
+	MateriaSource materiaSource1(materiaSource);
+	MateriaSource materiaSource2;
+	materiaSource2 = materiaSource1;
+	delete aMateria9;
+	delete aMateria10;
+	std::cout << std::endl << std::endl;
+
+	IMateriaSource* src = new MateriaSource();
+	src->learnMateria(new Ice());
+	src->learnMateria(new Cure());
+	ICharacter* me = new Character("me");
+	AMateria* tmp;
+	tmp = src->createMateria("ice");
+	me->equip(tmp);
+	tmp = src->createMateria("cure");
+	me->equip(tmp);
+	ICharacter* bob = new Character("bob");
+	me->use(0, *bob);
+	me->use(1, *bob);
+	delete bob;
+	delete me;
+	delete src;
 }
