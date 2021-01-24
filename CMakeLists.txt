@@ -6,22 +6,69 @@ set(CMAKE_CXX_FLAGS "-Wall -Werror -Wextra" )
 
 add_executable(DAY03 03/exp.cpp)
 
-add_executable(DAY03EX00 03/ex00/main.cpp 03/ex00/FragTrap.cpp 03/ex00/FragTrap.hpp)
+add_executable(DAY03EX00
+        03/ex00/main.cpp
+        03/ex00/FragTrap.cpp
+        03/ex00/FragTrap.hpp)
 
-add_executable(DAY03EX01 03/ex01/main.cpp 03/ex01/FragTrap.cpp 03/ex01/FragTrap.hpp 03/ex01/ScavTrap.cpp 03/ex01/ScavTrap.hpp)
+add_executable(DAY03EX01
+        03/ex01/main.cpp
+        03/ex01/FragTrap.cpp
+        03/ex01/FragTrap.hpp
+        03/ex01/ScavTrap.cpp
+        03/ex01/ScavTrap.hpp
+        )
 
-add_executable(d04e00 04/ex00/main.cpp 04/ex00/Sorcerer.cpp 04/ex00/Sorcerer.hpp 04/ex00/Victim.cpp 04/ex00/Victim.hpp 04/ex00/Peon.cpp 04/ex00/Peon.hpp)
+add_executable(d04e00
+        04/ex00/main.cpp
+        04/ex00/Sorcerer.cpp
+        04/ex00/Victim.cpp
+        04/ex00/Peon.cpp
+        )
 
-add_executable(d04e01 04/ex01/AWeapon.cpp 04/ex01/AWeapon.hpp 04/ex01/PlasmaRifle.cpp 04/ex01/PlasmaRifle.hpp 04/ex01/PowerFist.cpp 04/ex01/PowerFist.hpp 04/ex01/main.cpp 04/ex01/Enemy.cpp 04/ex01/Enemy.hpp 04/ex01/SuperMutant.cpp 04/ex01/SuperMutant.hpp 04/ex01/RadScorpion.cpp 04/ex01/RadScorpion.hpp 04/ex01/Character.cpp 04/ex01/Character.hpp)
+add_executable(d04e01
+        04/ex01/AWeapon.cpp
+        04/ex01/PlasmaRifle.cpp
+        04/ex01/PowerFist.cpp
+        04/ex01/main.cpp
+        04/ex01/Enemy.cpp
+        04/ex01/SuperMutant.cpp
+        04/ex01/RadScorpion.cpp
+        04/ex01/Character.cpp
+        )
 
-add_executable(d04e02 04/ex02/main.cpp
-        04/ex02/ISquad.hpp 04/ex02/ISpaceMarine.hpp 04/ex02/Squad.cpp 04/ex02/Squad.hpp
-        04/ex02/TacticalMarine.cpp 04/ex02/TacticalMarine.hpp 04/ex02/AssaultTerminator.cpp)
+add_executable(d04e02
+        04/ex02/main.cpp
+        04/ex02/Squad.cpp
+        04/ex02/TacticalMarine.cpp
+        04/ex02/AssaultTerminator.cpp
+        )
 
-add_executable(d04e03 04/ex03/main.cpp
-        04/ex03/AMateria.cpp 04/ex03/AMateria.hpp
-        04/ex03/ICharacter.hpp 04/ex03/IMateriaSource.hpp 04/ex03/Ice.cpp 04/ex03/Ice.hpp 04/ex03/Cure.cpp 04/ex03/Cure.hpp 04/ex03/Character.cpp 04/ex03/Character.hpp)
+add_executable(d04e03
+        04/ex03/main.cpp
+        04/ex03/AMateria.cpp
+        04/ex03/Ice.cpp
+        04/ex03/Cure.cpp
+        04/ex03/Character.cpp
+        )
 
-add_executable(CppModule main.cpp)
+add_executable(d05e00
+        05/ex00/Bureaucrat.cpp
+        05/ex00/main.cpp
+        )
 
-add_executable(ABSTRACT ABSTRACT.cpp 04/ex02/main.cpp)
+#add_executable(d05e01
+#        )
+#
+#add_executable(d05e02
+#        )
+#
+#add_executable(d05e03
+#        )
+
+add_executable(CppModule main.cpp
+                )
+
+add_executable(ABSTRACT ABSTRACT.cpp
+        04/ex02/main.cpp
+        )
