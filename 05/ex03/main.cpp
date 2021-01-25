@@ -3,9 +3,7 @@
 //
 #define NDEBUG
 #include "Form.hpp"
-#include "ShrubberyCreationForm.hpp"
-#include "PresidentialPardonForm.hpp"
-#include "RobotomyRequestForm.hpp"
+#include "Intern.hpp"
 
 int main()
 {
@@ -125,5 +123,18 @@ int main()
 	}
 	robotomyRequestForm.beSigned(bureaucrat);
 	robotomyRequestForm.execute(bureaucrat);
+	std::cout << std::endl << std::endl;
+
+	std::cout << "Intern" << std::endl;
+	Intern intern;
+	try {
+		intern.makeForm("Pardon", "hello");
+	}
+	catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+	Form *form13 =  intern.makeForm("Presidential Pardon", "hello");
+	std::cout << form13->getName() << std::endl;
+	delete form13;
 	return (0);
 }
