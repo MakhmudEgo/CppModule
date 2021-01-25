@@ -4,9 +4,8 @@ project(CppModule)
 set(CMAKE_CXX_STANDARD 98)
 set(CMAKE_CXX_FLAGS "-Wall -Werror -Wextra" )
 
-add_executable(d05e01
+add_executable(d05e02
         main.cpp
         Bureaucrat.cpp
         Form.cpp
-        Form.hpp
-        )
+        ShrubberyCreationForm.cpp ShrubberyCreationForm.hpp RobotomyRequestForm.cpp RobotomyRequestForm.hpp PresidentialPardonForm.cpp PresidentialPardonForm.hpp)
