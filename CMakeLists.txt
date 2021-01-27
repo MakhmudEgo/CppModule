@@ -67,7 +67,7 @@ add_executable(d05e00
 #        )
 
 add_executable(d06e00
-        06/main.cpp)
+        06/ex00/main.cpp 06/ex00/Convert.cpp)
 
 add_executable(CppModule main.cpp
                 )

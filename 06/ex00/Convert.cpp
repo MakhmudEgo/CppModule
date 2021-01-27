@@ -52,23 +52,21 @@ void Convert::toFloat()
 {
 	if (_valid && this->_type != STOP)
 	{
+		std::stringstream ss;
+
+		std::cout << "float: ";
 		if (this->_type == DOUBLE)
 		{
-			std::stringstream ss;
 			ss << this->_double;
 			ss >> this->_float;
+			this->_float = 0;
 			if (ss.fail())
 			{
-				std::cout << "char: impossible" << std::endl
-				<< "int: impossible"
-				<< "float: impossible"
-				<<"double: "<< this->_double;
-				this->_type = STOP;
+				std::cout << "impossible" << std::endl;
 			}
 		}
-		if (this->_type != STOP)
+		if (!ss.fail())
 		{
-			std::cout << "float: ";
 			switch (this->_type)
 			{
 				case CHAR:
@@ -76,22 +74,23 @@ void Convert::toFloat()
 					<< static_cast<float >(this->_char) << std::endl;
 					break ;
 				case INT:
-					std::cout << std::fixed << std::setprecision(1) << static_cast<float >(this->_int) << std::endl;
+					std::cout << std::fixed << std::setprecision(1) << static_cast<float >(this->_int);
 					break ;
 				case DOUBLE:
 					this->_float = static_cast<float >(this->_double);
 					if (this->_float == roundf(this->_float))
-						std::cout << std::fixed << std::setprecision(1) << this->_float << std::endl;
+						std::cout << std::fixed << std::setprecision(1) << this->_float;
 					else
-						std::cout << this->_double << std::endl;
+						std::cout << this->_double;
 					break ;
 				case FLOAT:
 					if (this->_float == round(this->_float))
-						std::cout << std::fixed << std::setprecision(1) << this->_float << std::endl;
+						std::cout << std::fixed << std::setprecision(1) << this->_float;
 					else
-						std::cout << this->_float << std::endl;
+						std::cout << this->_float;
 					break ;
 			}
+			std::cout << 'f' << std::endl;
 		}
 	}
 }
@@ -130,7 +129,38 @@ void Convert::toInt()
 {
 	if (_valid && this->_type != STOP)
 	{
+		bool bNotFail = true;
 
+		std::cout << "int: ";
+		if (this->_type == DOUBLE || this->_type == FLOAT)
+		{
+			try {
+				this->_int = std::stoi(this->_szData);
+			}
+			catch (std::exception &e) {
+				std::cout << "impossible" << std::endl;
+				bNotFail = false;
+			}
+		}
+		if (bNotFail)
+		{
+			switch (this->_type)
+			{
+				case CHAR:
+					std::cout << static_cast<int >(this->_char) << std::endl;
+					break;
+				case INT:
+					std::cout << this->_int << std::endl;
+					break;
+				case DOUBLE:
+					this->_int = static_cast<int >(this->_double);
+					std::cout << this->_int << std::endl;
+					break;
+				case FLOAT:
+					std::cout << this->_int << std::endl;
+					break;
+			}
+		}
 	}
 }
 
@@ -138,7 +168,49 @@ void Convert::toChar()
 {
 	if (_valid && this->_type != STOP)
 	{
+		std::stringstream ss;
 
+		std::cout << "char: ";
+		if (this->_type != CHAR)
+		{
+			try {
+				this->_int = std::stoi(this->_szData);
+			}
+			catch (std::exception &e){
+				this->_int = 500;
+			}
+			if (ss.fail() || this->_int > 127 || this->_int < -128)
+			{
+				this->_int = 500;
+				std::cout << "impossible" << std::endl;
+			}
+		}
+		if (this->_int != 500)
+		{
+			switch (this->_type)
+			{
+				case DOUBLE:
+					this->_char = static_cast<char >(this->_double);
+					break;
+				case FLOAT:
+					std::cout << this->_int << std::endl;
+					break;
+				default:
+					this->_char = static_cast<char >(this->_int);
+			}
+			if (isprint(this->_char))
+			{
+				std::cout << this->_char << std::endl;
+			}
+			else
+			{
+				std::cout << "Non displayable" << std::endl;
+			}
+		}
+		if (this->_type == INT)
+		{
+			this->_int = std::stoi(this->_szData);
+		}
 	}
 }
 
