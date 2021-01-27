@@ -66,6 +66,9 @@ add_executable(d05e00
 #add_executable(d05e03
 #        )
 
+add_executable(d06e00
+        06/main.cpp)
+
 add_executable(CppModule main.cpp
                 )
 
