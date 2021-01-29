@@ -306,3 +306,26 @@ bool Convert::checkStrRes()
 	}
 	return (false);
 }
+
+Convert::Convert(const Convert &convert)
+{
+	operator=(convert);
+}
+
+Convert &Convert::operator=(const Convert &convert)
+{
+	if(this != &convert)
+	{
+		this->_szData = convert._szData;
+		this->_valid = convert._valid;
+		this->_type = convert._type;
+		this->_char = convert._char;
+		this->_int = convert._int;
+		this->_float = convert._float;
+		this->_double = convert._double;
+	}
+	return (*this);
+}
+
+Convert::~Convert()
+{}

@@ -23,7 +23,7 @@ all:		$(NAME)
 $(NAME):	$(OSRC)
 			clang++ $(FLAGS) $(OSRC) -o $(NAME)
 
-%.o:		%.c
+%.o:		%.cpp
 			clang++ $(FLAGS) -c $< -o $@
 
 clean:
