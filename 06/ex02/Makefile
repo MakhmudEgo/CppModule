@@ -10,9 +10,9 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME =	Serialization
+NAME =	IdentifyRealType
 
-SRC =		main.cpp
+SRC =		main.cpp Base.cpp A.cpp B.cpp C.cpp
 
 FLAGS =		-Wall -Wextra -Werror
 

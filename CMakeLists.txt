@@ -73,8 +73,11 @@ add_executable(d06e00
 
 add_executable(d06e01
         06/ex01/main.cpp
-
         )
+
+add_executable(d06e02
+        06/ex02/main.cpp
+        06/ex02/Base.cpp 06/ex02/Base.hpp 06/ex02/A.cpp 06/ex02/A.hpp 06/ex02/B.cpp 06/ex02/B.hpp 06/ex02/C.cpp 06/ex02/C.hpp)
 
 add_executable(CppModule main.cpp
                 )
