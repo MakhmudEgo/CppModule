@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.17)
 project(CppModule)
 
 set(CMAKE_CXX_STANDARD 98)
-set(CMAKE_CXX_FLAGS "-Wall -Werror -Wextra" )
+#set(CMAKE_CXX_FLAGS "-Wall -Werror -Wextra" )
 
 add_executable(DAY03 03/exp.cpp)
 
@@ -67,7 +67,14 @@ add_executable(d05e00
 #        )
 
 add_executable(d06e00
-        06/ex00/main.cpp 06/ex00/Convert.cpp)
+        06/ex00/main.cpp
+        06/ex00/Convert.cpp
+        )
+
+add_executable(d06e01
+        06/ex01/main.cpp
+
+        )
 
 add_executable(CppModule main.cpp
                 )
