@@ -32,22 +32,6 @@ Convert::Convert(const std::string &szData)
 	}
 }
 
-/*Convert::Convert(const Convert &convert)
-: _szData(convert._szData), _valid(convert._valid)
-{}
-
-Convert &Convert::operator=(const Convert &convert)
-{
-	if (this != &convert)
-	{
-		this->_valid = convert._valid;
-	}
-	return (*this);
-}*/
-
-Convert::~Convert()
-{}
-
 void Convert::toFloat()
 {
 	if (_valid && this->_type != STOP)
@@ -71,7 +55,7 @@ void Convert::toFloat()
 			{
 				case CHAR:
 					std::cout << std::fixed << std::setprecision(1)
-					<< static_cast<float >(this->_char) << std::endl;
+					<< static_cast<float >(this->_char);
 					break ;
 				case INT:
 					std::cout << std::fixed << std::setprecision(1) << static_cast<float >(this->_int);
@@ -168,8 +152,6 @@ void Convert::toChar()
 {
 	if (_valid && this->_type != STOP)
 	{
-		std::stringstream ss;
-
 		std::cout << "char: ";
 		if (this->_type != CHAR)
 		{
@@ -179,11 +161,15 @@ void Convert::toChar()
 			catch (std::exception &e){
 				this->_int = 500;
 			}
-			if (ss.fail() || this->_int > 127 || this->_int < -128)
+			if (this->_int > 127 || this->_int < -128)
 			{
 				this->_int = 500;
 				std::cout << "impossible" << std::endl;
 			}
+		}
+		else
+		{
+			this->_char = this->_szData[0];
 		}
 		if (this->_int != 500)
 		{
@@ -193,9 +179,9 @@ void Convert::toChar()
 					this->_char = static_cast<char >(this->_double);
 					break;
 				case FLOAT:
-					std::cout << this->_int << std::endl;
+					this->_char = static_cast<char >(this->_float);
 					break;
-				default:
+				case INT:
 					this->_char = static_cast<char >(this->_int);
 			}
 			if (isprint(this->_char))

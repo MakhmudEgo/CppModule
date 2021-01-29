@@ -20,9 +20,6 @@
 class Convert {
 public:
 	Convert(const std::string& szData);
-	Convert(const Convert&);
-	Convert& operator=(const Convert&);
-	~Convert();
 	void toFloat();
 	void toDouble();
 	void toInt();
