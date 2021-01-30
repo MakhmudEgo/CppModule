@@ -88,8 +88,11 @@ add_executable(d06e02
         )
 
 add_executable(d07e00
-        07/main.cpp
-        07/whatever.hpp)
+        07/ex00/main.cpp
+        07/ex00/whatever.hpp)
+
+add_executable(d07e01
+        07/ex01/main.cpp 07/ex01/iter.hpp)
 
 add_executable(CppModule main.cpp
                 )

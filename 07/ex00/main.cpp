@@ -37,5 +37,5 @@ int main()
 	std::cout << "max - " <<  ::max(std::string("hello"), std::string("HELLO")) << std::endl;
 	std::cout << "min - " <<  ::min(std::string("hello"), std::string("HELLO")) << std::endl << std::endl;
 
-
+	return (0);
 }
