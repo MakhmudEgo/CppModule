@@ -15,7 +15,7 @@ int main()
 	ft_diff(arrInt);
 
 	std::cout << "test for char" << std::endl;
-	char arrChar[] = {(char)(96 + rand() % 25), (char)(97 + rand() % 25), (char)(97 + rand() % 25), (char)(97 + rand() % 25), (char)(97 + rand() % 25)};
+	char arrChar[] = {(char)(97 + rand() % 26), (char)(97 + rand() % 26), (char)(97 + rand() % 26), (char)(97 + rand() % 26), (char)(97 + rand() % 26)};
 	ft_diff(arrChar);
 
 	std::cout << "test for flaot" << std::endl;

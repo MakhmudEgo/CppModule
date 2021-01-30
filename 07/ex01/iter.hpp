@@ -8,9 +8,9 @@
 # include <iostream>
 
 template<typename T>
-void iter(T *arr, int arrLenght, void(f)(T &))
+void iter(T *arr, int arrLength, void(f)(T &))
 {
-	for (int i = 0; i < arrLenght; ++i)
+	for (int i = 0; i < arrLength; ++i)
 	{
 		f(arr[i]);
 	}
