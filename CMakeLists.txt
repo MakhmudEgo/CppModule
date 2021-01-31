@@ -99,6 +99,10 @@ add_executable(d07e02
         07/ex02/main.cpp
         07/ex02/Array.tpp)
 
+add_executable(d08e00
+        08/ex00/main.cpp
+        08/ex00/easyfind.hpp)
+
 add_executable(CppModule main.cpp
                 )
 
