@@ -11,7 +11,7 @@
 
 class Span {
 public:
-	Span(unsigned int maxSpan);
+	Span(unsigned int maxSizeSpan);
 	Span(const Span&);
 	Span& operator=(const Span&);
 	virtual ~Span();
@@ -24,10 +24,14 @@ public:
 	public:
 		const char *what() const throw();
 	};
+
+	class NotEnoughDataSpan : public std::exception {
+	public:
+		const char *what() const throw();
+	};
 private:
 	std::vector<int> _span;
-	unsigned int _maxSpan;
+	unsigned int _maxSizeSpan;
 };
-
 
 #endif //SPAN_HPP
