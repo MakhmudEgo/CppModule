@@ -22,9 +22,10 @@ int main()
 		std::cout << e.what() << std::endl;
 	}
 	span.addNumber(5);
-	span.addNumber(3);
+//	span.addNumber(2);
 	span.addNumber(17);
 	span.addNumber(9);
+	span.addNumber(3);
 	span.addNumber(11);
 	std::cout << span.shortestSpan() << std::endl;
 	std::cout << span.longestSpan() << std::endl;
