@@ -54,6 +54,16 @@ public:
 		}
 		return (this->_arr[index]);
 	}
+
+	const T& operator[](unsigned int index) const
+	{
+		if (index >= this->_length)
+		{
+			throw BadIndex();
+		}
+		return (this->_arr[index]);
+	}
+
 	class BadIndex : public std::exception {
 	public:
 		const char *what() const throw()

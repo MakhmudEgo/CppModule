@@ -8,7 +8,7 @@
 # include <iostream>
 
 template<typename T>
-void iter(T *arr, int arrLength, void(f)(T &))
+void iter(T *arr, int arrLength, void(f)(const T &))
 {
 	for (int i = 0; i < arrLength; ++i)
 	{
@@ -17,32 +17,9 @@ void iter(T *arr, int arrLength, void(f)(T &))
 }
 
 template<typename T>
-void ft_increment(T& helo)
+void ft_put(const T& t)
 {
-	helo += 1;
-}
-
-template<typename T>
-int ft_put(T& t, int len)
-{
-	int i = 0;
-
-	for (; i < len; ++i)
-	{
-		std::cout << t[i] << ' ';
-	}
-	return (i);
-}
-
-template<typename T>
-void ft_diff(T *t)
-{
-	std::cout << "before" << std::endl;
-	ft_put(t, 5);
-	iter(t, 5, ft_increment);
-	std::cout << std::endl << "after" << std::endl;
-	ft_put(t, 5);
-	std::cout << std::endl << std::endl;
+	std::cout << t << ' ';
 }
 
 #endif //ITER_HPP

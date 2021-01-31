@@ -46,5 +46,11 @@ int main()
 	assig = copy;
 	ft_put_endl(assig, assig.size());
 
+	const Array<int> ConstArray(10);
+/*	for (int i = 0; i < 10; ++i)
+	{
+		ConstArray[i] = rand() % 10;
+	}*/
+
 	return (0);
 }
