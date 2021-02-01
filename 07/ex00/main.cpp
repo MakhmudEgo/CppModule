@@ -21,7 +21,7 @@ int main()
 	std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
 	std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl << std::endl;
 
-	std::cout << "test for int (5, 8)" << std::endl;
+	std::cout << "test for int (5, 18)" << std::endl;
 	std::cout << "max - " <<  ::max(5, 18) << std::endl;
 	std::cout << "min - " <<  ::min(5, 18) << std::endl << std::endl;
 
