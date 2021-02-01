@@ -22,7 +22,7 @@ int main()
 		std::cout << e.what() << std::endl;
 	}
 	span.addNumber(5);
-//	span.addNumber(2);
+	span.addNumber(3);
 	span.addNumber(17);
 	span.addNumber(9);
 	span.addNumber(3);
