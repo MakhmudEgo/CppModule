@@ -22,17 +22,26 @@ int main()
 
 	std::cout << "const_iterator" << std::endl;
 	MutantStack<int>::const_iterator constIter = mutantStack.cbegin();
-	std::cout << *constIter << std::endl;
+	std::cout << "cbegin: "<< *constIter << std::endl;
+	MutantStack<int>::const_iterator constIterEnd = mutantStack.cend();
+	std::cout << "cend(-1): "<< *(--constIterEnd) << std::endl;
 	*iter = 5;
 	std::cout << *iter << std::endl;
 //	*constIter = 12; // const
 	std::cout << "reverse_iterator" << std::endl;
 	MutantStack<int>::reverse_iterator reverseIterator = mutantStack.rbegin();
-	std::cout << *reverseIterator << std::endl;
+	std::cout << "rbegin: " << *reverseIterator << std::endl;
+
+	MutantStack<int>::reverse_iterator reverseIteratorEnd = mutantStack.rend();
+	std::cout << "rend: " << *(--reverseIteratorEnd) << std::endl;
+
 	std::cout << "const_reverse_iterator" << std::endl;
 	MutantStack<int>::const_reverse_iterator constReverseIterator = mutantStack.crbegin();
-	std::cout << *constReverseIterator << std::endl;
+	std::cout << "crbegin: " << *constReverseIterator << std::endl;
+	MutantStack<int>::const_reverse_iterator constReverseIteratorEnd = mutantStack.crend();
+	std::cout << "cend: " << *(--constReverseIteratorEnd) << std::endl;
 
+	std::cout << std::endl;
 	std::cout << "test for copy constructor and operator=" << std::endl;
 	MutantStack<int> mutantStack1;
 	mutantStack1 = mutantStack;

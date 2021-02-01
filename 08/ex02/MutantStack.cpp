@@ -3,5 +3,3 @@
 //
 
 #include "MutantStack.hpp"
-
-

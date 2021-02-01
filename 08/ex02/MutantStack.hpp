@@ -63,5 +63,4 @@ public:
 
 };
 
-
 #endif //MUTANTSTACK_HPP
