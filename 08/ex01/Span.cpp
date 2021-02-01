@@ -42,24 +42,22 @@ void Span::addNumber(int i)
 int Span::shortestSpan() const
 {
 	int longestSpan = this->longestSpan();
-	int minValue = *std::min_element(this->_span.begin(), this->_span.end());
-	int maxValue = *std::max_element(this->_span.begin(), this->_span.end());
-//	int index = 0;
+
 	for (int i = 0; i < this->_span.size(); ++i)
 	{
-		if (this->_span[i] == minValue)
+		for (int j = 0; j < this->_span.size(); ++j)
 		{
-			for (int j = 0; j < this->_span.size(); ++j)
+			if (i != j && std::abs(this->_span[j] - this->_span[i]) < longestSpan)
 			{
-				if (i != j && this->_span[j] < longestSpan)
+				longestSpan = std::abs(this->_span[j] - this->_span[i]);
+				if (!longestSpan)
 				{
-					maxValue = this->_span[j];
+					return (longestSpan);
 				}
 			}
-			break ;
 		}
 	}
-	return (maxValue - minValue);
+	return (longestSpan);
 }
 
 int Span::longestSpan() const {
