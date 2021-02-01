@@ -43,9 +43,9 @@ int Span::shortestSpan() const
 {
 	int longestSpan = this->longestSpan();
 
-	for (int i = 0; i < this->_span.size(); ++i)
+	for (int i = 0; i < (int)this->_span.size(); ++i)
 	{
-		for (int j = 0; j < this->_span.size(); ++j)
+		for (int j = 0; j < (int)this->_span.size(); ++j)
 		{
 			if (i != j && std::abs(this->_span[j] - this->_span[i]) < longestSpan)
 			{

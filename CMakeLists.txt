@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.17)
 project(CppModule)
 
 set(CMAKE_CXX_STANDARD 98)
-#set(CMAKE_CXX_FLAGS "-Wall -Werror -Wextra -std=c++98" )
+set(CMAKE_CXX_FLAGS "-Wall -Werror -Wextra -std=c++98" )
 
 add_executable(DAY03 03/exp.cpp)
 
