@@ -56,6 +56,19 @@ add_executable(d05e00
         05/ex00/Bureaucrat.cpp
         05/ex00/main.cpp
         )
+add_executable(d05e01
+        05/ex01/Bureaucrat.cpp
+        05/ex01/main.cpp
+        05/ex01/Form.cpp
+        )
+add_executable(d05e02
+        05/ex02/Bureaucrat.cpp
+        05/ex02/main.cpp
+        05/ex02/Form.cpp
+        05/ex02/ShrubberyCreationForm.cpp
+        05/ex02/RobotomyRequestForm.cpp
+        05/ex02/PresidentialPardonForm.cpp
+        )
 
 #add_executable(d05e01
 #        )
