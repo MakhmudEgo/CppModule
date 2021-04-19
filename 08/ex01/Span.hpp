@@ -12,6 +12,7 @@
 class Span {
 public:
 	Span(unsigned int maxSizeSpan);
+	Span(std::vector<int>::iterator it_begin, std::vector<int>::iterator it_end);
 	Span(const Span&);
 	Span& operator=(const Span&);
 	virtual ~Span();

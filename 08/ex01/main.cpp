@@ -3,6 +3,12 @@
 //
 
 #include "Span.hpp"
+#include <algorithm>
+
+void init(int &n) {
+	static int i = 0;
+	n = ++i;
+}
 
 int main()
 {
@@ -32,14 +38,10 @@ int main()
 	std::cout << span.shortestSpan() << std::endl;
 	std::cout << span.longestSpan() << std::endl;
 	srand(time(nullptr));
-	for (int i = 0; i < 10001; ++i)
 	{
-		try {
-			span.addNumber(i);
-		}
-		catch (std::exception &e) {
-			std::cout << e.what() << std::endl;
-		}
+		std::vector<int> res(10001);
+		std::for_each(res.begin(), res.end(), init);
+		Span multi(res.begin(), res.end());
 	}
 	std::cout << span.shortestSpan() << std::endl;
 	std::cout << span.longestSpan() << std::endl;

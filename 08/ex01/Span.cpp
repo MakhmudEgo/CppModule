@@ -69,6 +69,9 @@ int Span::longestSpan() const {
 	- *std::min_element(this->_span.begin(), this->_span.end()));
 }
 
+Span::Span(std::vector<int>::iterator it_begin, std::vector<int>::iterator it_end)
+: _span(it_begin, it_end) {}
+
 
 const char *Span::SpanFull::what() const throw()
 {
