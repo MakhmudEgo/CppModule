@@ -10,21 +10,18 @@ void init(int &n) {
 	n = ++i;
 }
 
-int main()
-{
+int main() {
 	std::cout << "hello day 08 ex 01 :(" << std::endl;
 
 	Span span(10001);
 	try {
 		std::cout << span.shortestSpan() << std::endl;
-	}
-	catch (std::exception &e) {
+	} catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
 	try {
 		std::cout << span.longestSpan() << std::endl;
-	}
-	catch (std::exception &e) {
+	} catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
 	span.addNumber(5);
@@ -37,7 +34,6 @@ int main()
 	span.addNumber(3);
 	std::cout << span.shortestSpan() << std::endl;
 	std::cout << span.longestSpan() << std::endl;
-	srand(time(nullptr));
 	{
 		std::vector<int> res(10001);
 		std::for_each(res.begin(), res.end(), init);
@@ -47,6 +43,15 @@ int main()
 		std::vector<int> res(10000);
 		std::for_each(res.begin(), res.end(), init);
 		Span multi(10002);
+		multi.addNumber(res.begin(), res.end());
+
+//		return 13;
+	}
+	{
+		std::vector<int> res(5);
+		std::for_each(res.begin(), res.end(), init);
+		Span multi(10002);
+		multi.addNumber(13);
 		multi.addNumber(res.begin(), res.end());
 
 		return 13;
