@@ -48,13 +48,14 @@ int main() {
 //		return 13;
 	}
 	{
+		std::cout << "====== ostream test begin =======" << std::endl;
 		std::vector<int> res(5);
 		std::for_each(res.begin(), res.end(), init);
 		Span multi(10002);
 		multi.addNumber(13);
 		multi.addNumber(res.begin(), res.end());
-
-		return 13;
+		std::cout << multi << std::endl;
+		std::cout << "====== ostream test end =======" << std::endl;
 	}
 	std::cout << span.shortestSpan() << std::endl;
 	std::cout << span.longestSpan() << std::endl;

@@ -70,6 +70,29 @@ void Span::addNumber(std::vector<int>::iterator it_begin, std::vector<int>::iter
 	}
 }
 
+Span::const_iterator Span::cbegin() const {
+	return this->_span.cbegin();
+}
+
+Span::const_iterator Span::cend() const {
+	return this->_span.end();
+}
+
+std::ostream &operator<<(std::ostream &os, const Span &span) {
+	std::vector<int>::const_iterator it_start = span.cbegin();
+	std::vector<int>::const_iterator it_end = span.cend();
+
+	bool isSpace = false;
+	for (; it_start != it_end; ++it_start) {
+		if (isSpace) {
+			os << ' ';
+		}
+		isSpace = true;
+		os << *it_start;
+	}
+	return os;
+}
+
 
 const char *Span::SpanFull::what() const throw() {
 	return "Span Full";

@@ -22,6 +22,14 @@ public:
 	int shortestSpan() const;
 	int longestSpan() const;
 
+
+	typedef std::vector<int>::const_iterator const_iterator;
+
+	const_iterator cbegin() const;
+	const_iterator cend() const;
+
+	friend std::ostream &operator<<(std::ostream &os, const Span &span);
+
 	class SpanFull : public std::exception {
 	public:
 		const char *what() const throw();
