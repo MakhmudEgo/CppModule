@@ -18,7 +18,7 @@ public:
 	virtual ~Span();
 
 	void addNumber(int);
-	void addNumber(std::vector<int>::iterator it_begin, std::vector<int>::iterator it_end);
+	void push(std::vector<int>::iterator it_begin, std::vector<int>::iterator it_end);
 	int shortestSpan() const;
 	int longestSpan() const;
 
@@ -28,7 +28,7 @@ public:
 	const_iterator cbegin() const;
 	const_iterator cend() const;
 
-	friend std::ostream &operator<<(std::ostream &os, const Span &span);
+	size_t size() const;
 
 	class SpanFull : public std::exception {
 	public:
@@ -39,9 +39,17 @@ public:
 	public:
 		const char *what() const throw();
 	};
+
+	class NotEnoughSpace : public std::exception {
+	public:
+		const char *what() const throw();
+	};
 private:
 	std::vector<int> _span;
-	unsigned int _maxSizeSpan;
+	size_t _size;
+	size_t _maxSizeSpan;
 };
+
+std::ostream &operator<<(std::ostream &os, const Span &span);
 
 #endif //SPAN_HPP

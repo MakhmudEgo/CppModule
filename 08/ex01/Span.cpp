@@ -4,7 +4,7 @@
 
 #include "Span.hpp"
 
-Span::Span(unsigned int maxSizeSpan) : _maxSizeSpan(maxSizeSpan) {
+Span::Span(unsigned int maxSizeSpan) : _size(0), _maxSizeSpan(maxSizeSpan) {
 }
 
 Span::~Span() {
@@ -17,18 +17,17 @@ Span::Span(const Span &span) {
 
 Span &Span::operator=(const Span &span) {
 	if (this != &span) {
-		for (std::vector<int>::const_iterator iter = span._span.begin(); iter != span._span.end(); iter++) {
-			this->_span.push_back(*iter);
-		}
+		std::copy(span.cbegin(), span.cend(), std::back_inserter(this->_span));
 		this->_maxSizeSpan = span._maxSizeSpan;
 	}
 	return (*this);
 }
 
 void Span::addNumber(int i) {
-	if (this->_span.size() == this->_maxSizeSpan) {
+	if (_size == this->_maxSizeSpan) {
 		throw SpanFull();
 	}
+	_size++;
 	this->_span.push_back(i);
 }
 
@@ -57,17 +56,21 @@ int Span::longestSpan() const {
 }
 
 Span::Span(std::vector<int>::iterator it_begin, std::vector<int>::iterator it_end, size_t maxSizeSpan)
-: _span(it_begin, it_end), _maxSizeSpan(maxSizeSpan){
+: _span(it_begin, it_end), _maxSizeSpan(maxSizeSpan) {
 	if (_span.size() > _maxSizeSpan) {
-		throw SpanFull();
+		throw NotEnoughSpace();
 	}
 }
 
-void Span::addNumber(std::vector<int>::iterator it_begin, std::vector<int>::iterator it_end) {
-	this->_span.insert(_span.end(), it_begin, it_end);
-	if (_span.size() > _maxSizeSpan) {
+void Span::push(std::vector<int>::iterator it_begin, std::vector<int>::iterator it_end) {
+	if (_size == _maxSizeSpan) {
 		throw SpanFull();
 	}
+	else if (it_end - it_begin > static_cast<int>(_maxSizeSpan - _size)) {
+		throw NotEnoughSpace();
+	}
+	this->_span.insert(_span.end(), it_begin, it_end);
+	_size += it_end - it_begin;
 }
 
 Span::const_iterator Span::cbegin() const {
@@ -93,6 +96,10 @@ std::ostream &operator<<(std::ostream &os, const Span &span) {
 	return os;
 }
 
+size_t Span::size() const {
+	return _size;
+}
+
 
 const char *Span::SpanFull::what() const throw() {
 	return "Span Full";
@@ -100,4 +107,8 @@ const char *Span::SpanFull::what() const throw() {
 
 const char *Span::NotEnoughDataSpan::what() const throw() {
 	return "Not Enough Data In The Span";
+}
+
+const char *Span::NotEnoughSpace::what() const throw() {
+	return "Not Enough Space";
 }
