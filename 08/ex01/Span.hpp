@@ -12,12 +12,13 @@
 class Span {
 public:
 	Span(unsigned int maxSizeSpan);
-	Span(std::vector<int>::iterator it_begin, std::vector<int>::iterator it_end);
+	Span(std::vector<int>::iterator it_begin, std::vector<int>::iterator it_end, size_t maxSizeSpan);
 	Span(const Span&);
 	Span& operator=(const Span&);
 	virtual ~Span();
 
 	void addNumber(int);
+	void addNumber(std::vector<int>::iterator it_begin, std::vector<int>::iterator it_end);
 	int shortestSpan() const;
 	int longestSpan() const;
 

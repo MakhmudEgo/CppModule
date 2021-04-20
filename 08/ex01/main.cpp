@@ -41,7 +41,15 @@ int main()
 	{
 		std::vector<int> res(10001);
 		std::for_each(res.begin(), res.end(), init);
-		Span multi(res.begin(), res.end());
+		Span multi(res.begin(), res.end(), 10003);
+	}
+	{
+		std::vector<int> res(10000);
+		std::for_each(res.begin(), res.end(), init);
+		Span multi(10002);
+		multi.addNumber(res.begin(), res.end());
+
+		return 13;
 	}
 	std::cout << span.shortestSpan() << std::endl;
 	std::cout << span.longestSpan() << std::endl;

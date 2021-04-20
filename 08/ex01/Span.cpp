@@ -69,8 +69,19 @@ int Span::longestSpan() const {
 	- *std::min_element(this->_span.begin(), this->_span.end()));
 }
 
-Span::Span(std::vector<int>::iterator it_begin, std::vector<int>::iterator it_end)
-: _span(it_begin, it_end) {}
+Span::Span(std::vector<int>::iterator it_begin, std::vector<int>::iterator it_end, size_t maxSizeSpan)
+: _span(it_begin, it_end), _maxSizeSpan(maxSizeSpan){
+	if (_span.size() > _maxSizeSpan) {
+		throw SpanFull();
+	}
+}
+
+void Span::addNumber(std::vector<int>::iterator it_begin, std::vector<int>::iterator it_end) {
+	this->_span.insert(_span.end(), it_begin, it_end);
+	if (_span.size() > _maxSizeSpan) {
+		throw SpanFull();
+	}
+}
 
 
 const char *Span::SpanFull::what() const throw()
